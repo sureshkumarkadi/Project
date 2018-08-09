@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <Showvalue>//button[@ng-model='showByValue']</Showvalue>
+        <Values>//div[@class='align-right ng-binding ng-scope']</Values>
+        <pricableitems>//div[@class='ng-isolate-scope']//div[@class='ng-scope']//*[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]//div[@class='ui-grid-cell-contents ng-binding ng-scope']</pricableitems>
+        <deleteitems>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</deleteitems>
+        <selectfilter>//button[@class='btn btn-sm btn-primary dropdown-toggle' and @ng-click='openDropdown($event)']</selectfilter>
+        <Closefilter>//button[@class='btn btn-sm btn-link' and @ng-click='closeDropDown($event)']</Closefilter>
+        <selectpricable>//button[@ng-model='item.isSelected']</selectpricable>
+
+	</eTender>
+
+</data>

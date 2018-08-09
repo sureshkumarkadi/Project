@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data>
+	<eTender>
+		<NotificationLink>Notification recipients</NotificationLink>
+		<tags>Tags</tags>
+		<TaskScheduler>Task scheduler</TaskScheduler>
+		<Usercheckbox>//div[@class="ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope ui-grid-row-selected"]</Usercheckbox>
+		<TagInputBox>//input[@placeholder="Type new tag name"]</TagInputBox>
+		<TagSearchBox>//input[@ng-model="colFilter.term"]</TagSearchBox>
+		<TagValue>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</TagValue>
+		<TagButton>//button[@class='btn btn-primary']</TagButton>
+		<TagDelete>Delete</TagDelete>
+		<DeleteButton>//button[text()='Delete']</DeleteButton>
+		<TagNewSearchBox>//input[@ng-model="colFilter.term"]</TagNewSearchBox>
+		<TaskValues>//input[@type='number']</TaskValues>
+		<DueDateReminder>//input[@type='number']</DueDateReminder>
+		<TenderReminder>//input[@type='number']</TenderReminder>
+		<SaveButton>//button[text()='Save']</SaveButton>
+		<ResetButton>//button[text()='Reset']</ResetButton>
+		<NotificationMessageLink>Notification messages</NotificationMessageLink>
+		<TemplateTextBox>note-editable</TemplateTextBox>
+		<User>//a[@ng-click="insertMessage('user')"]</User>
+		<Organization>//a[@ng-click="insertMessage('organisation')"]</Organization>
+		<Project>//a[@ng-click="insertMessage('project')"]</Project>
+		<Tender>//a[@ng-click="insertMessage('tender')"]</Tender>
+		<SaveBtn>Save</SaveBtn>
+		<CancelBtn>Cancel</CancelBtn>
+		<EmailSetup>Email setup</EmailSetup>
+		<GeneralSettings>General settings</GeneralSettings>
+	</eTender>
+</data>

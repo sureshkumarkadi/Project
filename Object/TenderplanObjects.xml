@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+		<plantemplatelink>//span[text()='Plan templates']</plantemplatelink>
+        <plantemplateheading>//h3[text()='Plan template listing']</plantemplateheading>
+        <createtemplatebutton>//button[text()='Create template']</createtemplatebutton>
+        <createtemplateheading>//h3[text()='Plan template setup']</createtemplateheading>
+        <templatename>//input[@type='text']</templatename>
+        <templatedescription>//textarea[@name='description']</templatedescription>
+        <templateplansave>//button[@class='btn btn-primary' and @ng-click='savePlanTemplate(planTemplate)']</templateplansave>
+        <templateplanupdate>//button[@ng-click='updatePlanTemplate(planTemplate)']</templateplanupdate>
+        <templatenamevalidate1>//div[text()='procurement']</templatenamevalidate1>
+        <templatenamevalidate>//div[text()='procurement update']</templatenamevalidate>
+        <templatedescriptionvalidate1>//div[text()='procurement materials']</templatedescriptionvalidate1>
+        <templatedescriptionvalidate>//div[text()='procurement materialsupdate']</templatedescriptionvalidate>
+        <templatedetailsvalidate>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</templatedetailsvalidate>
+        <templatecreationaddstage>addStageBtn</templatecreationaddstage>
+        <selectstages1>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope' and @ng-click='selectButtonClick(row, $event)']</selectstages1>
+        <savestages>saveBtn</savestages>
+        <stagenameheading>//label[text()='Stage name']</stagenameheading>
+        <stageduration>//div[@class='row col-md-2']</stageduration>
+        <templateplanselection>//div[@ng-click='selectButtonClick(row, $event)']</templateplanselection>
+        <templateplandelete>//button[text()='Delete']</templateplandelete>
+        <templateplanalertmessage>//div[text()='Plan template name is required.']</templateplanalertmessage>
+        <templateedition>//button[text()='Edit']</templateedition>
+        <templateduration>//input[@type='number']</templateduration>
+        <duration>//div[@class='row col-md-2']//input[@class='form-control input-sm  align-right ng-pristine ng-valid ng-valid-number ng-valid-min']</duration>
+        <tenderplantender>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope']</tenderplantender>
+        <templateclose>//button[@ng-click='cancel()']</templateclose>
+        <tenderplanselect>//select[@data-ng-model='row.selectedAction']//option[@label='Tender plan']</tenderplanselect>
+        <plantemplateselect>//button[@ng-click='createPlanFromTemplate()']</plantemplateselect>
+        <templatestages>//label[@class='dnd-col col-md-9 control-label item ng-binding']</templatestages>
+        <stagesorder>//div[@class='drag-handle col-md-4' and @draggable='true']//i[@class='fa fa-expand fa-rotate-135']</stagesorder>
+        <planstages>//label[@class='col-md-4 control-label ng-binding']</planstages>
+        <selecteditems>//span[text()='Total Items: 2']</selecteditems>
+        <itemcount>//span[text()='(Selected Items: 1)']</itemcount>
+        <tenderplansave>//button[@ng-click='updateTenderPlan()']</tenderplansave>
+        <stagstatus>//label[text()='Completed']</stagstatus>
+        <actualdateclick>//button[@ng-click='openActual(item,$event)']</actualdateclick>
+        <actualdateselect>//tr//td//button[@class='btn btn-default btn-sm active']</actualdateselect>
+        <actualdate>//input[@ng-model='item.actual']</actualdate>
+        <actualdateselectconfirm>//button[text()='Confirm']</actualdateselectconfirm>
+        <templateplanneddate>//label[@class='dnd-col col-md-3 control-label item ng-binding']</templateplanneddate>
+        <templateforecastdate>planned</templateforecastdate>
+        <planneddateexclamation>//div//label//i[@class='fa fa-exclamation-circle orange']</planneddateexclamation>
+        <forecastdateexclamation>//i[@class='fa fa-exclamation-circle orange item pad-right']</forecastdateexclamation>
+        <stagselection>//input[@type='checkbox']</stagselection>
+        <stagdelete>//button[@ng-click='confirmDeleteStage()']</stagdelete>
+        <stagdeleteconfirm>//button[text()='Delete']</stagdeleteconfirm>
+        <stagadd>//button[@ng-click='addStage()']</stagadd>
+        <stagselect>//div[@ng-click='selectButtonClick(row, $event)']</stagselect>
+        <stagselectconfirm>saveBtn</stagselectconfirm>
+        <durationupdate>//input[@type='number']</durationupdate>
+        <notesfortenderplan>//button[@ng-click='showNotes($event)']</notesfortenderplan>
+        <notessave>//button[@ng-click='savePlanNote(note)']</notessave>
+        <notesforstag>//button[@ng-click='addNote(item,$event)']</notesforstag>
+        <notessaveforstag>//button[@ng-click='saveNote(note)']</notessaveforstag>
+        <resetplanned>//button[@ng-click='confirmUpdatePlannedDates()']</resetplanned>
+        <resetplannedconfirm>//button[text()='Confirm']</resetplannedconfirm>
+        <trades>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</trades>
+        <adduserCheckbox>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope']</adduserCheckbox>
+        <deletesuppliercontact>//button[@ng-click='grid.appScope.removeTendererFromSelection(row.entity)']</deletesuppliercontact>
+        <sendenquirytosuppliercontact>//button[text()='Send tender enquiry']</sendenquirytosuppliercontact>
+        <sendenquirysuccessmessage>//div[text()='Tender enquiry has been sent to the selected supplier(s)']</sendenquirysuccessmessage>
+        <suppliercontact>//div[text()='suresh.kumar@causeway.com']</suppliercontact>
+        <suppliercompany>//button[text()='Hanks Civils Ltd']</suppliercompany>
+        <selectautofill>//button[@ng-click='selectDate()']</selectautofill>
+        <datepickerselect>//button[@ng-click='openForecastPopup($event)']</datepickerselect>
+        <dateselect>//span[@class='ng-binding text-info']</dateselect>
+        <dateselect1>//span[@class='ng-binding']</dateselect1>
+        <forecastdate>//input[@ng-model='forecastDate']</forecastdate>
+        <savedetails>//button[@class='btn btn-primary']</savedetails>
+        <radiobutton>//input[@ng-model='toggleDate']</radiobutton>
+        <tenderplan>//a[@ng-click="vm.showTab('tender-plan');"]</tenderplan>
+        <selecttenderplan>//button[@ng-click='selectTenderPlanTemplate()']</selecttenderplan>
+        <notesfortenderplan1>//button[@ng-click='savePlanNote(note)']</notesfortenderplan1>
+        <rfi>//a[@ng-click="vm.showTab('rfi')"]</rfi>
+
+	</eTender>
+</data>

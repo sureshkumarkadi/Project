@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<data>
+	<eTender>
+		<ProjectName>//input[@name='prjName']</ProjectName>
+		<ProjReference>//input[@name="prjReference"]</ProjReference>
+		<SaveBtn>//button[starts-with(text(),'Save')]</SaveBtn>
+		<CreateTbtn>//a[text()='Create tender']</CreateTbtn>
+		<TenderName>//input[@name='tenderName']</TenderName>
+		<TenderReference>//input[@ng-model='tender.reference']</TenderReference>
+		<TenderDescription>//textarea[@ng-model='tender.description']</TenderDescription>
+		<TenderType>//span[@class='btn btn-default form-control ui-select-toggle']</TenderType>
+		<TenderStartDate>//input[@id='stdate_picker']</TenderStartDate>
+		<TenderDueDate>//input[@id='duedate_picker']</TenderDueDate>
+		<CreateProject>//a[text()='Create project']</CreateProject>
+		<TradeItem>//small[text()='TRADE']</TradeItem>
+		<TenderCheckbox>//span[@ng-click='editTender(tender)']</TenderCheckbox>
+		<DeleteBtn>//button[@ng-click='removeTender()']</DeleteBtn>
+		<YesBtn>//button[text()='Yes']</YesBtn>
+		<EditBtn>//button[text()='Edit']</EditBtn>
+		<UpdateBtn>//button[starts-with(text(),'Update')]</UpdateBtn>
+		<CloseBtn>//i[@class='pull-right fa fa-times-circle ng-scope']</CloseBtn>
+		<BackToList>//button[starts-with(text(),'Back to tender list')]</BackToList>
+		<ResetBtn>//button[starts-with(text(),'Reset')]</ResetBtn>
+		<startdate>//i[@id='stdate_picker_icon']</startdate>
+		<enddate>//i[@id='duedate_picker_icon']</enddate>
+		<SSdate>//tr/td[@class='today active start-date active end-date available']</SSdate>
+        <SSdateweekend>//tr/td[@class='today weekend active start-date active end-date available']</SSdateweekend>
+		<RightArrow>//th[@class='next available']</RightArrow>
+		<DDdate>//td[@class='available' and @data-title='r4c1']</DDdate>
+		<SelectOption>//span[starts-with(text(),'Select options')]</SelectOption>
+		<SupplierOption>//span/small[text()='Add suppliers']</SupplierOption>
+		<Lookupwindow>//label[starts-with(text(),'Supplier selection - Search for the supplier by company name, if they are not shown a link will be displayed to add them')]</Lookupwindow>
+		<Lookupclose>//div[@class='ngdialog-close']</Lookupclose>
+		<currencyfortender>//span[text()='Own rate ($)']</currencyfortender>
+        <currencyfortenderRate>//span[text()='Rate ($)']</currencyfortenderRate>
+        <currencyfortenderValue>//span[text()='Value ($)']</currencyfortenderValue>
+		<TenderSearchBox>//input[@ng-model='colFilter.term']</TenderSearchBox>
+		<TenderPlan>//span/small[text()='Tender plan']</TenderPlan>
+		<TenderDetails>//span/small[text()='Details']</TenderDetails>
+		<CancelButton>//button[@ng-click="cancel()"]</CancelButton>
+		<PopupTitle>//label[@id='title']</PopupTitle>
+		<PlanTemplateSearch>//input[@ng-model="colFilter.term"]</PlanTemplateSearch>
+		<PreviewPlan>//i[@class="fa fa-eye clickable"]</PreviewPlan>
+		<TemplateCheckbox>//div[@class="ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope"]</TemplateCheckbox>
+		<SelectPlanBtn>//button[@ng-click="createPlanFromTemplate()" ]</SelectPlanBtn>
+		<ActDatePicker>//button[@class='btn btn-default btn-sm active']</ActDatePicker>
+        <warningmessage>//div[text()='You must enter a value for the package, you can enter a total in the totals box at the bottom of the page.']</warningmessage>
+		<ActualDate>//button[@ng-click='openActual(item,$event)']</ActualDate>
+		<ConfirmBtn>//button[text()='Confirm']</ConfirmBtn>
+		<CancelBtn>//button[@ng-click='resetActualDate()']</CancelBtn>
+		<StageStatus>//label[@class="dnd-col col-md-8 control-label ng-binding"]</StageStatus>
+		<StageClosed>//div[@class='dnd-col col-md-6']</StageClosed>
+		<ForeCastDate>//button[@ng-click='open(item,$event)']</ForeCastDate>
+		<ForecaseCal>//button[contains(@class,'active')]</ForecaseCal>
+		<NextMonth>//button[@class="btn btn-default btn-sm pull-right"]</NextMonth>
+		<OntimeStatus>//label[@class='dnd-col col-md-8 control-label item ng-binding']</OntimeStatus>
+        <startdateforecast>//td[@class='today active start-date active end-date available']</startdateforecast>
+        <startdateforecastasweekdate>//td[@class='today weekend active start-date active end-date available']</startdateforecastasweekdate>
+        <startdateforecastselection>//input[@ng-model='tender.forecast']</startdateforecastselection>
+        <startdate>//input[@ng-model='startDate']</startdate>
+        <duedateforecast>//td[@data-title='r4c6']</duedateforecast>
+		<StartdateText>//input[@id="stdate_picker"]</StartdateText>
+		<ForeCastDateText>//input[@id='planned']</ForeCastDateText>
+		<ForeStartButton>//input[@ng-model="tender.forecast"]</ForeStartButton>
+		<DueDateText>//input[@id='duedate_picker']</DueDateText>
+		<DueDatePro>duedate_picker</DueDatePro>
+		<PlanLink>Plans</PlanLink>
+		<RightArrowDuedate>//th[@class="next available"]/i[@class='fa fa-chevron-right glyphicon glyphicon-chevron-right']</RightArrowDuedate>
+		<DDdateTender>//td[@class="available" and @data-title="r4c4"]</DDdateTender>
+		<ExportButton>//i[@class="fa fa-download"]</ExportButton>
+		<ExportDetailButton>//i[@class="fa fa-cloud-download"]</ExportDetailButton>
+        <tenderstatus>//span[@class='ng-binding']</tenderstatus>
+        <tenderName>//a[@class='ng-binding']</tenderName>
+        <duplicatetender>//div[text()='Duplicate tender in the project.']</duplicatetender>
+        <tradelist>//button[@ng-click='backToTender()']</tradelist>
+        <generalsettingsmenu>//span[text()='General settings']</generalsettingsmenu>
+        <tenderverifyON>//i[@class='fa fa-toggle-on fa-rotate-180 toggle-select inactive ng-star-inserted']</tenderverifyON>
+        <tenderverifyOFF>//i[@class='fa fa-toggle-on toggle-select active ng-star-inserted']</tenderverifyOFF>
+        <generalsettingssave>//button[text()='Save']</generalsettingssave>
+        <tenderverifybutton>//button[@type='button']</tenderverifybutton>
+        <tenderverifystatus>//label[text()='Review pending']</tenderverifystatus>
+        <tenderverifySupplierstatus>//small[text()='Review pending']</tenderverifySupplierstatus>
+        <tenderverified>//i[@class='fa fa-check fa-lg']</tenderverified>
+        <tenderverifiedconfirm>//button[@ng-click='acceptTenderReview()']</tenderverifiedconfirm>
+		<tenderSearch>//input[@ng-model='searchFilter']</tenderSearch>
+		<updateTender>//span[@title='Update tender']</updateTender>
+		<SupplierBtn>Suppliers</SupplierBtn>
+		<AddSupplierBtn>//button[@ng-click="addSupplier(selectedSupplierTender)"]</AddSupplierBtn>
+		<PlanBtn>Tender plan</PlanBtn>
+		<SelectTemplate>//button[text()='Select plan template']</SelectTemplate>
+	</eTender>
+</data>

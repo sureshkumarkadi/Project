@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<orgLink>//span[text()='Organisation']</orgLink>
+		<orgSelection>//a[text()='GSE Civil Engineering Ltd']</orgSelection>
+        <project>//h4</project>
+        <projectvaluelabel>//small[text()='value:']</projectvaluelabel>
+        <projectduedatelabel>//small[text()='Due Date:']</projectduedatelabel>
+        <projectpagination>//a[@class='ng-binding' and @ng-click='selectPage(page.number)']</projectpagination>
+        <projectcurrencylabel>//label[text()='Project currency']</projectcurrencylabel>
+        <pendingtradeslist>//div[@class='media-body p-l-md']//h4//small[@ng-show='project.pendingTrades>0']</pendingtradeslist>
+        <selectpendingtrades>//button[@ng-model='pendingTenderFilter']</selectpendingtrades>
+        <projectdoc>//small[@ng-click='listProjectDocument(project)']</projectdoc>
+        <selectalltooltip>//div[@title='Change items per page to select more records ']</selectalltooltip>
+        <hyperlink>//a[text()=' Add hyperlink']</hyperlink>
+        <hyperlinklabels>//label[@class='control-label']</hyperlinklabels>
+        <documentnameURLasfile>//input[@ng-model='documentLink.name']</documentnameURLasfile>
+        <documentaddressURLasfile>//input[@ng-model='documentLink.link']</documentaddressURLasfile>
+        <addlink>//button[@ng-click='addDocumentLink()']</addlink>
+        <documentname>//a[text()='URLasfile']</documentname>
+        <internaldocumentname>//a[text()='InternalURLasfile']</internaldocumentname>
+        <externaldocumentname>//a[text()='ExternalURLasfile']</externaldocumentname>
+	</eTender>
+</data>

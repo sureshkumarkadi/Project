@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<title>//label[text()='Title']</title>
+		<Firstname>//label[text()='First name']</Firstname>
+		<lastname>//label[text()='Last name']</lastname>
+		<jobtitle>//label[text()='Job title']</jobtitle>
+		<email>//label[text()='Your email']</email>
+		<mphone>//label[text()='Mobile phone']</mphone>
+		<phone>//label[text()='Phone']</phone>
+		<linkedin>//label[text()='Linkedin']</linkedin>
+		<address>//label[text()='Organisation address']</address>
+		<county>//label[text()='County']</county>
+		<country>//label[text()='Country']</country>
+		<pcode>//label[text()='Postal code']</pcode>
+		<eFootNote>//label[text()='Email footnote']</eFootNote>
+		<resetbutton>//button[text()='Reset']</resetbutton>
+		<savebutton>//button[contains(text(),'changes')]</savebutton>
+		<image>//img[@src='common/images/default-user.png']</image>
+		<userProfileLink>User profile</userProfileLink>
+        <Salutation>//input[@value='{contact.title}']</Salutation>
+		<FirstnameTextbox>//input[@name='rFirstName']</FirstnameTextbox>
+        <LastnameTextbox>//input[@name='rLastName']</LastnameTextbox>
+        <Jobtitleclick>//div[@class='ui-select-match ng-scope']//span[@class='btn btn-default form-control ui-select-toggle' and @ng-click='$select.activate()']</Jobtitleclick>
+        <Jobtitlelist>//input[@ng-model='$select.search']</Jobtitlelist>
+        <Jobtitleselect>//small[@ng-bind-html='jobTitle.description | highlight: $select.search']</Jobtitleselect>
+        <usermobile>//input[@value='{contact.mobile}']</usermobile>
+        <userphone>//input[@value='{contact.phone}']</userphone>
+        <userlinkedin>//input[@value='{contact.linkedin}']</userlinkedin>
+        <submituserdetails>//button[@class='btn btn-primary' and @ng-click='updateProfile()' and @type='submit']</submituserdetails>
+        <username>//a[@data-toggle='dropdown']</username>
+		<locationprofile>//input[@ng-model='ngAddress']</locationprofile>
+		<locationLink>span[class=pac-matched]</locationLink>
+		<addresstextbox>//input[@value="{address.formattedAddress}"]</addresstextbox>
+		<orgProfileLink>Profile</orgProfileLink>
+		<orgProfileHeading>//div[@class=' col-md-9 ']//h3[@class='title thin']</orgProfileHeading>
+        <firstnameindetails>//div[@class='form-group' and @ng-show='selectedUser.firstName']//div[@class=' col-md-8']//a[@class='email ng-binding']</firstnameindetails>
+        <lastnameindetails>//div[@class='form-group' and @ng-show='selectedUser.lastName']//div[@class=' col-md-8']//a[@class='email ng-binding']</lastnameindetails>
+        <emaildetails>//div[@class='form-group' and @ng-show='selectedUser.email']//div[@class=' col-md-8']//a[@class='email ng-binding']</emaildetails>
+        <phonedetails>//div[@class='form-group' and @ng-show='contact.mobile']//div[@class=' col-md-8']//a[@class='email ng-binding']</phonedetails>
+        <closeuserdetails>//button[@ng-click='cancel()']</closeuserdetails>
+        <userDetails>Details</userDetails>
+		<SignatureBox>//textarea[@ng-model="contact.signature"]</SignatureBox>
+        <userslist>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</userslist>
+	</eTender>
+</data>

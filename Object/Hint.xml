@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <stagesmenu>Stages</stagesmenu>
+        <hinttitle>//h3[@class='hopscotch-title']</hinttitle>
+        <hintmoreinfo>//i[@title='More info']</hintmoreinfo>
+        <hintcontent>//div[@class='hopscotch-content']</hintcontent>
+        <hintbutton>//button[@class='hopscotch-nav-button next hopscotch-next']</hintbutton>
+        <systemfieldsmenu>System fields</systemfieldsmenu>
+        <systemcurrencymenu>System currencies</systemcurrencymenu>
+        <statisticsmenu>Statistics</statisticsmenu>
+        <showhints>//a[@ng-click='showHints()']</showhints>
+        <projectlist>//a[@class='ng-binding']</projectlist>
+        <overlaybackground>//div[@style='z-index: 10001; background: rgba(0, 0, 0, 0.5); position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px;']</overlaybackground>
+
+	</eTender>
+</data>

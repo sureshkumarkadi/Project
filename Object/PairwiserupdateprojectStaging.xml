@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+        <createproject>//a[text()='Create project']</createproject>
+        <updateproject>//span[@class='fa fa-pencil-square-o light-blue clickable']</updateproject>
+	 	<ProjectName>//div[@class=' col-md-9 ']//input[@class='form-control ng-isolate-scope ng-dirty ng-valid ng-valid-prj-name']</ProjectName>
+        <ProjectName2>//input[@value='{project.name}']</ProjectName2>
+        <ProjectRef2>//input[@value='{project.reference}']</ProjectRef2>
+        <ProjectDes2>//textarea[@value='{project.description}']</ProjectDes2>
+        <Projectvalue2>//input[@value='{project.approxValue}']</Projectvalue2>
+        <ProjectRef>//div[@class=' col-md-9 ']//input[@class='form-control ng-isolate-scope ng-dirty ng-valid ng-valid-prj-reference']</ProjectRef>
+        <ProjectDes>//div[@class=' col-md-9 ']//textarea[@class='form-control ng-pristine ng-valid']</ProjectDes>
+        <Projecttypeclick>//div[@class='ui-select-match']//span[@class='btn btn-default form-control ui-select-toggle' and @ng-click='$select.activate()']</Projecttypeclick>
+        <Projecttypelist>//input[@class='form-control ui-select-search ng-pristine ng-valid' and @tabindex='-1']</Projecttypelist>
+        <Projecttypeselect>//span[@class='ui-select-choices-row-inner']//small[@class='ng-binding ng-scope']//span[@class='ui-select-highlight']</Projecttypeselect>
+        <Projectvalue>//div[@class=' col-md-9 ']//input[@class='form-control ng-pristine ng-valid ng-valid-number']</Projectvalue>
+        <Projectstartdate>//div//input[@id='stdate_picker']</Projectstartdate>
+        <Projectduedate>//div//input[@id='duedate_picker']</Projectduedate>
+        <startdatepicker>//table[@class='table-condensed']//tr//td[@class='today active start-date active end-date available']</startdatepicker>
+        <duedatepicker>//table[@class='table-condensed']//tr//td[@class='available' and @data-title='r4c1']</duedatepicker>
+        <duedatepickernext>//th[@class='next available']//i[@class='fa fa-chevron-right glyphicon glyphicon-chevron-right']</duedatepickernext>
+        <duedatepickerprevious>//th[@class='prev available']//i[@class='fa fa-chevron-left glyphicon glyphicon-chevron-left']</duedatepickerprevious>
+        <duedatalertmessage>//div[@class='toast-message']//div[@class='col-md-11 ng-binding ng-scope']</duedatalertmessage>
+        <duplicateprojectalertmessage>//div[@class='toast-message']//div[@class='col-md-11 ng-binding ng-scope']</duplicateprojectalertmessage>
+        <Projectlocation>//div[@class='col-md-9']//div[@class='input-group']//input[@class='form-control input-md ng-isolate-scope ng-pristine ng-valid']</Projectlocation>
+        <Saveproject>//button[@ng-click='updateProjectProfile()']</Saveproject>
+        <deleteproject>//button[@ng-click='deleteProject()']</deleteproject>
+        <confirmdeleteproject>//button[@ng-click='delete()']</confirmdeleteproject>
+        <Highways>//div[@image-id='55ffebad4c8eb615a56c599e']</Highways>
+        <Shops>//div[@image-id='55ffec574c8eb615a56c59f8']</Shops>
+        <Offices>//div[@image-id='55ffec0c4c8eb615a56c59cb']</Offices>
+        <Infrastructures>//div[@image-id='55ffebf94c8eb615a56c59c2']</Infrastructures>
+        <Shopfitting>//div[@image-id='55ffec464c8eb615a56c59ef']</Shopfitting>
+        <Housing>//div[@image-id='55ffebd64c8eb615a56c59a7']</Housing>
+        <BuildingEnvelops>//div[@image-id='55ffeca54c8eb615a56c5a13']</BuildingEnvelops>
+        <BuildingEnvelopsprojectdetails>//div[@class='media project-info']//a[@class='media-left media-image']//img[@class='img-responsive' and @ng-src='https://etender.staging.causeway.com/fileserver/api/file/image/55ffeca54c8eb615a56c5a13']</BuildingEnvelopsprojectdetails>
+        '<!--'<None>//div[@class='col-md-2 container m-t-md']//div[@class='pull-right thumbnails fileUpload ng-isolate-scope ng-pristine ng-valid']//div[@ng-show='!image_url']//div[@ng-show='!default_company && default_project']//img[@class='img-responsive  img-circle']</None>'-->'
+        <None>//img[@class='img-responsive  img-circle ']</None>
+        <Schools>//div[@image-id='5602318e4c8e005ced91734f']</Schools>
+        <Refurbishment>//div[@image-id='55ffec204c8eb615a56c59d4']</Refurbishment>
+        <Structures>//span[text()='Structures']</Structures>
+        <Structuresprojecttype>//div[@image-id='560231f24c8e005ced917358']</Structuresprojecttype>
+        <SportsComplex>//div[@image-id='55ffec644c8eb615a56c5a01']</SportsComplex>
+        <Drainage>//div[@image-id='55ffeb6d4c8eb615a56c5995']</Drainage>
+        <projectname1>//div[@class='media-body p-l-md']//h4//a[@class='ng-binding']</projectname1>
+        <projectrefvaluedate>//div[@class='media-body p-l-md']//h4//small[@class='ng-binding']</projectrefvaluedate>
+        <ProjectchangeName>ProjectchangeName1</ProjectchangeName>
+        <Projectname>//a[@class='ng-binding']</Projectname>
+	</eTender>
+</data>

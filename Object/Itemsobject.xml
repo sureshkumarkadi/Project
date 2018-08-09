@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+		<defaultitem>//div[text()='General works']</defaultitem>
+        <newitem>//div[text()='10 mm brick']</newitem>
+        <edititem>//button[@ng-click='editItems()']</edititem>
+        <additemclick>//button[@ng-click='addNextItem()']</additemclick>
+        <additem>//div[@tabindex='-1']</additem>
+        <additeminput>//div[@class='ng-scope']//form[@class='ng-pristine ng-valid']/input</additeminput>
+        <additemsave>//button[@ng-click='saveData()']</additemsave>
+        <selectitem>//div[@ng-click='selectButtonClick(row, $event)']</selectitem>
+        <selectitemcount>//div[@class='ui-grid-footer-info ui-grid-grid-footer ng-scope']</selectitemcount>
+        <deleteitem>//button[@ng-click='checkRemovableItems()']</deleteitem>
+        <confirmdeleteitem>//button[@ng-click='removeItems()']</confirmdeleteitem>
+        <itemsintender>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</itemsintender>
+        <tenderlink>//a[@class='ng-binding']</tenderlink>
+        <itemquantity>//div[@class='ui-grid-cell-contents align-right ng-binding ng-scope']</itemquantity>
+        <itemrate>//div[@class='ng-binding ng-scope']</itemrate>
+        <importlink>//input[@type='file']</importlink>
+        <importitems>//button[@ng-click='confirmUpload()']</importitems>
+        <itemdescription>//div[@title='machine loading']</itemdescription>
+        <actions>//button[@type='button']</actions>
+        <invitecolleague>//button[@ng-click='showUserLookup()']</invitecolleague>
+        <emailinvite>//a[text()='Email not in the list? Send invite directly']</emailinvite>
+        <currentorgemails>//p[@class='p-l-md ng-binding ng-scope']</currentorgemails>
+        <emailnotinthelist>//input[@ng-model='filter_email']</emailnotinthelist>
+        <Invitebutton>//button[@ng-click='directInviteCoworker(filter_email)']</Invitebutton>
+        <close>//button[@ng-click='cancel()']</close>
+        <invitationsent>//div[text()='Colleague invitation sent']</invitationsent>
+        <invitecolleaguesearch>//input[@ng-model='colFilter.term']</invitecolleaguesearch>
+        <searchemail>//small[text()='dummy12@etender.com']</searchemail>
+
+	</eTender>
+</data>

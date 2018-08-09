@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<TenderReturnTrue>//i[@ng-if="organisationSettings.tenderVerification == true"]</TenderReturnTrue>
+		<TenderReturnFalse>//i[@ng-if="organisationSettings.tenderVerification == false"]</TenderReturnFalse>
+		<SaveBtn>//button[text()='Save']</SaveBtn>
+		<ResetBtn>//button[text()='Reset']</ResetBtn>
+		
+	</eTender>
+</data>
+

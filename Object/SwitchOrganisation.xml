@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<switchOrganisation>Switch organisation</switchOrganisation>
+        <selectDMOrganisation>//div/span[text()='DownerMouchel']</selectDMOrganisation>
+        <selectDMOrganisationPtrade>//div/span[text()='Bangalore Exports ltd']</selectDMOrganisationPtrade>
+        <selectGSEOrganisation>//div/span[text()='GSE Civil Engineering Ltd']</selectGSEOrganisation>
+        <newprojectfromAPI>ProjectfromRESTAPI</newprojectfromAPI>
+        <deleteproject>//div[@class='col-md-8']//button[@class='btn btn-primary' and @ng-click='deleteProject()']</deleteproject>
+        <confirmdeleteproject>//div[@class='col-md-12']//button[@class='btn btn-primary' and @ng-click='delete()']</confirmdeleteproject>
+        <itemdescription>//div[@class='ng-isolate-scope']//div[@class='ng-scope']//*[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]//div[@class='ui-grid-cell-contents ng-binding ng-scope' and @title='65 mm thick']</itemdescription>
+        <itemdescriptiondummy>//div[@class='ng-isolate-scope']//div[@class='ng-scope']//*[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]//div[@class='ui-grid-cell-contents ng-binding ng-scope' and @title='65 mm thick']</itemdescriptiondummy>
+        <userprofile>User profile</userprofile>
+        <userprofileheading>//h3[text()='Your eTender profile information ']</userprofileheading>
+	</eTender>
+</data>

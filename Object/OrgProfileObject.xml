@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<orgProfileLink>Profile</orgProfileLink>
+        <AdduserLink>Add user</AdduserLink>
+		<orgProfileHeading>//h3[@class='title thin']</orgProfileHeading>
+        <orgName>//div[@class=' col-md-9 ']//input[@class='form-control ng-isolate-scope ng-dirty ng-valid ng-valid-org-name' and @type='text']</orgName>
+        <orgName1>//input[@value='{organisation.accountName}']</orgName1>
+        <orgPhone1>//input[@value='{organisation.phone}']</orgPhone1>
+        <organisationWebsite1>//input[@value='{organisation.website}']</organisationWebsite1>
+        <organisationEmail1>//input[@value='{organisation.email}']</organisationEmail1>
+        <orgPhone>//div[@class=' col-md-9 ']//input[@class='form-control ng-isolate-scope ng-dirty ng-valid ng-valid-org-phone' and @type='text']</orgPhone>
+        <organisationname>//div[@class='navbar-collapse collapse']//ul[@class='nav navbar-nav']//li[@class='navbar-brand ng-binding ng-scope']</organisationname>
+        <organisationWebsite>//div[@class=' col-md-9 ']//input[@class='form-control ng-pristine ng-valid']</organisationWebsite>
+        <organisationEmail>//div[@class=' col-md-9 ']//input[@class='form-control ng-pristine ng-valid']</organisationEmail>
+        <organisatioupdate>//button[@class='btn btn-primary' and @ng-click='updateOrganisationProfile()']</organisatioupdate>
+        <clickontoastmessage>//div[@class='col-md-1 toaster-close-btn']//i[@class='pull-right fa fa-times-circle ng-scope' and @ng-switch-default='']</clickontoastmessage>
+        <OrgImage>//div[@class='col-md-2 container m-t-md']//div[@class='pull-right thumbnails fileUpload ng-isolate-scope ng-pristine ng-valid' and @image-id='5924206a0ee3c506780c10d6']</OrgImage>
+        <organisationmenu>Organisation</organisationmenu>
+        <stagesmenu>Stages</stagesmenu>
+        <organisation-search>//div[@class='ng-scope']//input[@class='ui-grid-filter-input ui-grid-filter-input-0']</organisation-search>
+        <organisationdetails>Details</organisationdetails>
+        <organisationdeletelink>Delete</organisationdeletelink>
+        <organisationdeleteconfirm>//button[text()='Delete']</organisationdeleteconfirm>
+        <organisationName>//div[@class='form-group']//div[@class=' col-md-8']//a[@class='email ng-binding']</organisationName>
+        <organisationphone>//div[@class='form-group' and @ng-show='organisation.phone']//div[@class=' col-md-8 ']//a[@class='email ng-binding']</organisationphone>
+        <organisationwebsite>//div[@class='form-group' and @ng-show='organisation.website']//div[@class=' col-md-8 ']//a[@class='email ng-binding']</organisationwebsite>
+        <organizationEmail>//div[@class='form-group' and @ng-show='organisation.email']//div[@class=' col-md-8 ']//a[@class='email ng-binding']</organizationEmail>
+	    <organisationdetailsClose>//div[@class='col-md-12 pull-right']//button[@class='btn btn-link' and @ng-click='cancel()']</organisationdetailsClose>
+	</eTender>
+</data>

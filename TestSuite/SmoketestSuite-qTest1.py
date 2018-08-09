@@ -1,0 +1,129 @@
+# Purpose: To execute test cases and update result in qTest
+#
+# Author:      mathew.jacob
+#
+# Created:     02-02-2018
+#
+# Copyright:   (c) Causeway Technologies 2016
+#
+#-------------------------------------------------------------------------------
+import time
+import sys
+import os
+
+#Setup the folder and environment
+dir_path = os.path.dirname(os.path.realpath(__file__))
+folder_path=os.path.abspath(os.path.join(dir_path, os.pardir))
+sys.path.insert(0,folder_path+"\TestScript")
+sys.path.insert(0,folder_path+"\SysLibrary")
+sys.path.insert(0,folder_path+"\Library")
+
+#Library functions
+from setupenviron import setupValue
+
+#setup folders for storing reports and logs
+setup = setupValue()
+setup.folderCreation()
+
+#Test Cases for execution
+from plantemplateactualresetplanned import Plantemplateactualresetplanned
+from plantemplatestagstatuscompleted import Plantemplatestagstatuscompleted
+from warningwhennorates import Warningwhennorates
+from tenderdefaultitem import Tenderdefaultitem
+from tenderedititemdefault import Tenderedititemdefault
+from tenderadditem import Tenderadditem
+from tenderitemupdate import Tenderitemupdate
+from tenderitemdelete import Tenderitemdelete
+from tenderitemintenderpage import Tenderitemintenderpage
+from tenderitemselectcount import Tenderitemselectcount
+from tenderlistviewafterdeleteitem import Tenderlistviewafterdeleteitem
+from tenderitemsimport import Tenderitemsimport
+from viewnewbillitems import Viewnewbillitems
+from pendingtradefilter import Pendingtradefilter
+from tendercreationBalconiesTrade import TendercreationBalconiesTrade
+from tendercreationBalconiesSupplier import TendercreationBalconiesSupplier
+from tendercreationBalustradingMaterial import TendercreationBalustradingMaterial
+from tendercreationBalustradingTrade import TendercreationBalustradingTrade
+from tendercreationBalustradingSupplier import TendercreationBalustradingSupplier
+from tendercreationBalconiesMaterial import TendercreationBalconiesMaterial
+from tendercreationBalustradingDuplicate import TendercreationBalustradingDuplicate
+from tenderverificationOFF import TenderverificationOFF
+from tenderverificationONStatus import TenderverificationONStatus
+from tenderverificationONSupplierStatus import TenderverificationONSupplierStatus
+from tenderverificationON import TenderverificationON
+from tenderverifiedON import TenderverifiedON
+from viewdeleteditemsinestimator import Viewdeleteditemsinestimator
+from viewdeleteditemsinsupplier import Viewdeleteditemsinsupplier
+from plantemplatestartasforecastdate import Plantemplatestartasforecastdate
+from plantemplateduedateasforecastdate import Plantemplateduedateasforecastdate
+from plantemplateAutofillstartasforecastdate import PlantemplateAutofillstartasforecastdate
+from plantemplateAutofillduedateasforecastdate import PlantemplateAutofillduedateasforecastdate
+from updateprojectdetailsBuildingEnvelopeStaging import UpdateprojectdetailsBuildingEnvelops
+from updateprojectdetailsDrainageStaging import UpdateprojectdetailsDrainage
+from updateprojectdetailsHighwaysStaging import UpdateprojectdetailsHighways
+from updateprojectdetailsHousingStaging import UpdateprojectdetailsHousing
+from updateprojectdetailsInfrastructuresStaging import UpdateprojectdetailsInfrastructures
+from updateprojectdetailsNoneStaging import UpdateprojectdetailsNone
+from updateprojectdetailsOfficesStaging import UpdateprojectdetailsOffices
+from updateprojectdetailsRefurbishmentStaging import UpdateprojectdetailsRefurbishment
+from updateprojectdetailsSchoolsStaging import UpdateprojectdetailsSchools
+from updateprojectdetailsShopfittingStaging import UpdateprojectdetailsShopfitting
+from updateprojectdetailsShopsStaging import UpdateprojectdetailsShops
+from updateprojectdetailsSportsComplexStaging import UpdateprojectdetailsSportsComplex
+from updateprojectdetailsStructuresStaging import UpdateprojectdetailsStructures
+from Emailsetup import EmailSend
+from AT_AddUsertoOrganization import AddUserOrganization
+from AT_AddRoletoUser import AddRoletoUserInOrg
+from AT_RemoveRoletoUser import RemoveRoletoUserInOrg
+from AT_MinimumRoletoUser import MinimumRoletoUserInOrg
+from AT_RemoveUserfromOrganization import RemoveUserOrganization
+from AT_CancelAddUsertoOrganization import CancelButtonInAddUser
+from AT_UserSelectionforRole import UserSelectionForRole
+from AT_ProfilePageUIverification import ProfileOrganizationUI
+from AT_ProfileResetfunction import ProfileResetButton
+from AT_ProfileSavefunction import ProfileSaveButton
+from AT_ProfileLocationSetfunction import Profilelocationselection
+from AT_ResetButtonVerification import ResetButtonInAddUser
+from AT_SelectUsertoOrganizationMessage import SelectUserMessage
+from AT_UserProfileResetfunction import UserProfileResetButton
+from AT_UserProfileSavefunction import UserProfileSaveButton
+from AT_UserProfileLocationSet import UserProfilelocationselection
+from AT_UserProfileUIverification import UserProfileUI
+from AT_ProjectOpenOrganization import Organizationinproject
+from AT_NotificationAddReceipients import NotificationaddUser
+from AT_NotificationMinimumReceipients import NotificationMinimumUser
+from AT_CreateNewTag import CreateNewTag
+from AT_DeleteTag import DeleteTag
+from AT_VerifyDuplicateTag import DuplicateTag
+from AT_TaskSchedulerSave import SaveTaskScheduler
+from AT_TaskSchedulerReset import ResetTaskScheduler
+from AT_NotificationTemplateSave import NotificationTemplateSave
+from AT_NotificationMessageOption import NotificationMessageOption
+from AT_NotificationMessageTemplate import NotificationMessageTemplate
+from AT_NotificationTemplateCancel import NotificationTemplateCancel
+from AT_TenderCreation import TenderCreationClass
+from AT_TenderDeletion import TenderDeletionClass
+from AT_TenderUpdation import TenderUpdationClass
+from AT_ResetTender import TenderResetClass
+from AT_BackToTenderlist import TenderList
+from AT_SupplierLookup import SupplierLookup
+from AT_TenderSearch import TenderSearchClass
+from AT_CancelPlanTemplate import CancelPlanTemplate
+from AT_PreviewPlanTemplate import PreviewPlan
+from AT_SelectPlanTemplate import SelectPlanTemplate
+from AT_PlanTemplateAlreadySelected import PlanTemplateSelected
+from AT_StageCompletedStatus import StatusStageCompleted
+from AT_StageCompletedLateStatus import StatusStageCompletedLate
+from AT_StageOntimeStatus import StageOntimeStatus
+from AT_StatusActualDateCancel import ActualDateCancel
+from AT_StartDateAsForeCast import StartDateAsForecast
+from AT_DueDateAsForeCast import DueDateAsForecast
+from AT_ExportToExcel import ExportToExcel
+from AT_ResponseToExcel import ExportToDetailsExcel
+from AT_FootnoteSettings import FootNoteClass
+from AT_EmailSetupPageverification import EmailSetupPage
+from AT_TenderReturnSaveSettings import TenderVerifySave
+from AT_TenderReturnResetSettings import TenderVerifyReset
+
+
+

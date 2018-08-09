@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+		<title>//button[text()='Cancel']</title>
+        <Pluslink>//button[@ng-click='grid.appScope.showUsers(row)']</Pluslink>
+        <tradexsupplier>//select[@data-ng-model='row.selectedAction']//option[@label='Add suppliers']</tradexsupplier>
+        <tradexsupplierinput>//input[@ng-model='colFilter.term']</tradexsupplierinput>
+        <tradexsupplierwindowclose>//button[text()='Cancel']</tradexsupplierwindowclose>
+        <closetradexuserwindow>//button[@ng-click='closeUserLookup()']</closetradexuserwindow>
+        <trades>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</trades>
+        <tradename>//div[@title='plywood']</tradename>
+        <tradeemail>//div[@title='plywood@newuser.com']</tradeemail>
+        <adduserCheckbox>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope']</adduserCheckbox>
+        <addtoinvite>//button[@ng-click='addToInviteList()']</addtoinvite>
+        <deletesuppliercontact>//button[@ng-click='grid.appScope.removeTendererFromSelection(row.entity)']</deletesuppliercontact>
+        <confirmdeletesuppliercontact>//button[@ng-click='removeUserFromTender()']</confirmdeletesuppliercontact>
+        <sendenquirytosuppliercontact>//button[text()='Send tender enquiry']</sendenquirytosuppliercontact>
+        <sendenquirysuccessmessage>//div[text()='Tender enquiry has been sent to the selected supplier(s)']</sendenquirysuccessmessage>
+        <suppliercontact>//div[text()='hanks.civils@mailinator.com']</suppliercontact>
+        <suppliercompany>//button[text()='Hanks Civils Ltd']</suppliercompany>
+        <supplierinvite>//a[@ng-click='grid.appScope.directInviteForm()']</supplierinvite>
+        <newsuppliername>//input[@ng-model='directOrgInvite.name']</newsuppliername>
+        <newsupplieremail>//input[@ng-model='directOrgInvite.email']</newsupplieremail>
+        <newsupplieradd>//button[@ng-click='addSupplierInviteDetails()']</newsupplieradd>
+        <userinvite>//a[@ng-click='addUserInviteForm()']</userinvite>
+        <newusername>//input[@ng-model='directUserInvite.name']</newusername>
+        <newuseremail>//input[@ng-model='directUserInvite.email']</newuseremail>
+        <newuseradd>//input[@ng-click='addUserToSelectedInvites()']</newuseradd>
+        <suppliericon>//span[@ng-click='listSuppliers(tender)']</suppliericon>
+        <addsupplierbutton>//button[@ng-click='addSupplier(selectedSupplierTender)']</addsupplierbutton>
+        <ranksupplierlink>//a[@class='btn btn-link']</ranksupplierlink>
+        <ranksupplierlabel>//label[text()='Rank suppliers']</ranksupplierlabel>
+        <rankingoff>//i[@class='fa fa-toggle-on fa-rotate-180 toggle-select inactive ng-scope']</rankingoff>
+        <rankingon>//i[@class='fa fa-toggle-on toggle-select active ng-scope']</rankingon>
+        <rankdisplay>//span[@class='ng-binding']</rankdisplay>
+        <ranknumber>//div[@class='ui-grid-cell-contents ng-binding ng-scope']</ranknumber>
+        <tradexstatus>//div[text()='App_Consid']</tradexstatus>
+
+	</eTender>
+</data>

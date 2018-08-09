@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <LoginName>LoginName</LoginName>
+		<password>password</password>
+        <submitButton>submitButton</submitButton>
+        <Tenderacceptance>//div[@class='tree-folder-content']//a[@class='tree-item ng-scope']</Tenderacceptance>
+		<organisation>//span[text()='Organisation']</organisation>
+		<project>AutomationTest Two Organisatio</project>
+		<projectlist>Test Project</projectlist>
+        <projectlistPtrade>Bangalore UK Contractors</projectlistPtrade>
+        <projectlistmenu>List project</projectlistmenu>
+		<tenderdetails>//a[@class='btn btn-link ng-scope']</tenderdetails>
+        <tenderdetailsestimator>//a[@class='ng-binding']</tenderdetailsestimator>
+        <inputtenderdetails>//input[@ng-model='$select.search']</inputtenderdetails>
+        <inputtenderdetails1>//input[@aria-activedescendant='ui-select-choices-row-0-0']</inputtenderdetails1>
+        <selectdetails>//span[@class='ui-select-highlight']</selectdetails>
+        <tradexsupplier>//div//select[@class='form-control ui-grid-filter-select ng-pristine ng-valid']//option[@value='2']</tradexsupplier>
+        <tradexsupplierinput>//input[@type='text']</tradexsupplierinput>
+		<tradecolumns>//small[@class='ng-binding']</tradecolumns>
+		<rates>//div[@tabindex='-1']//div[@class='align-right ng-binding ng-scope']</rates>
+		'<!--'<insertrate>//div[@class='ng-scope']//form[@class='ng-pristine ng-valid']/input</insertrate>'-->'
+        <insertrate>/div[@class='ng-scope']/input</insertrate>
+		<userprofile>//div//a[@class='m-l-md ng-binding']</userprofile>
+		<logout>Logout</logout>
+		<organisation-text>GSE Civil Engineering Ltd</organisation-text>
+		<pendingTrades>//div[@class='media-body p-l-md']//h4[@class='non-pad']//small[@ng-show='organisation.pendingTrades > 0']</pendingTrades>
+		<orgwebsite>http://www.gse-group.co.uk/</orgwebsite>
+		<itemdescription>//div[@class='ng-isolate-scope']//div[@class='ng-scope']//*[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]//div[@class='ui-grid-cell-contents ng-binding ng-scope' and @title='1000 x 600 mm high1']</itemdescription>
+		<tradefirstsub>//a[text()='A - Preliminaries - A1303 - Te']</tradefirstsub>
+        <tradesecondsub>//a[text()='A - Preliminaries - A1304 - Ed']</tradesecondsub>
+        <tradefirstest>//a[text()='A - Preliminaries - A1303 - Temp Proppin']</tradefirstest>
+        <tradesecondest>//a[text()='A - Preliminaries - A1304 - Edge Protect']</tradesecondest>
+        <sendmessage>//button[@ng-click='showMessageDraft()']</sendmessage>
+        <unrated>//div[@class='col-md-10']//button[@class='btn btn-text' and @ng-click='openPriceUnratedItems()']</unrated>
+        <Included>//div[@class='p-l-md']//label//input[@class='ng-pristine ng-valid' and @type='radio' and @ng-model='unrated' and @value='I' and @name='unratedItem']</Included>
+        <notesinsendmessage>//div[@class='note-editable' and @contenteditable='true']</notesinsendmessage>
+        <sendbutton>//button[@class='btn btn-primary' and @ng-click='sendMessage()']</sendbutton>
+        <clearbutton>//button[@class='btn btn-default' and @ng-click='clear()']</clearbutton>
+        <backtotenderdetails>//button[@class='btn btn-default' and @ng-click='backToTenderDetail()']</backtotenderdetails>
+        <toastmessage-Estimator>//div[@class='toast-message' and @on='toaster.bodyOutputType']//div[@class='col-md-11 ng-binding ng-scope' and @ng-switch-default='']</toastmessage-Estimator>
+        <values>//div[@class='align-right ng-binding ng-scope']</values>
+		<profileLink>Profile</profileLink>
+		<addUserLink>Add user</addUserLink>
+		<organizationLink>Organisation</organizationLink>
+		<userRoleLink>User role</userRoleLink>
+		<selectionCheckbox>ui-grid-cell-contents</selectionCheckbox>
+		<resetButton>//button[text()='Reset']</resetButton>
+		<adduserOrganisation>//button[contains(text(),'Add user to organisation')]</adduserOrganisation>
+		<emailSearchbox>//input[@type='text']</emailSearchbox>
+		<adduserCheckbox>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope']</adduserCheckbox>
+		<adduserSavebutton>saveBtn</adduserSavebutton>
+		<saveButon>//button[text()='Save']</saveButon>
+		<removeButton>removeBtn</removeButton>
+		<yesButton>//button[text()='Yes']</yesButton>
+		<notes>//button[@ng-click='grid.appScope.addNote(row,$event)']</notes>
+		<notesbubble>//div[@class='col-md-4']//div[@ng-show='row.entity.priceIsRequired']//button[@class='btn btn-text']</notesbubble>
+		<dialogbox>//div[@class='modal-header']//label[@id='title']</dialogbox>
+		<clicknotesbubble>//button[@class='btn btn-text' and @ng-click='grid.appScope.addNote(row,$event)']</clicknotesbubble>
+		<addingnotes>//div[@class='note-editable' and @contenteditable='true']</addingnotes>
+		<savenotes>//button[@ng-click='saveNote(note)']</savenotes>
+        <savenotestenderplan>//button[@ng-click='savePlanNote(note)']</savenotestenderplan>
+		<tendererdocument>//div//button[@class='btn btn-text' and @ng-click='uploadTendererDocument()']</tendererdocument>
+        <actionslist>//button[@type='button']</actionslist>
+		<uploaddocument>//div[@class='modal-header']//h4[@id='title' and @class='title']</uploaddocument>
+        <Pluslink>//a[@ng-click="vm.showTab('supplier')"]</Pluslink>
+        <activetenders>//select[@ng-model='colFilter.term']//option[@value='number:0']</activetenders>
+		<adddocument>//button[@ng-click='uploadTendererDocument()']</adddocument>
+		<delete>//a[@ng-click='grid.appScope.showDeleteDocumentConfirmation(row.entity)']</delete>
+		<deletedoc>//button[@class='btn btn-primary' and @ng-click='deleteDocument()']</deletedoc>
+		<documentcount>//button[@class='btn btn-text' and @ng-click='uploadTendererDocument()']//span[@class='badge ng-binding']</documentcount>
+        <documentcountEstimator>//button[@class='btn btn-link' and @ng-click='grid.appScope.grid.appScope.listTendererDocument(row)']//span[@class='badge-sm superscript ng-binding']</documentcountEstimator>
+        <documentviewEstimator>//div[@class='pad-left m-t-sm ng-scope']//a[@class='ng-binding']</documentviewEstimator>
+		<closewindow>//button[@class='btn btn-link' and @ng-click='cancel()']</closewindow>
+		<submittender>//div//button[@ng-click='submitTender()']</submittender>
+		<confirmsubmit>//div//button[@ng-click='confirmSubmitTender()']</confirmsubmit>
+		<confirmtendersubmission>//div//button[@ng-click='confirmSubmitTender()']</confirmtendersubmission>
+		<tendersubmitted>//div//li[@ng-show='projectName']//a[@class='ng-binding']</tendersubmitted>
+		<NotesbubbleinEstimatorLogin>//i[@class='fa fa-comment-o m-l-md clickable ng-scope']</NotesbubbleinEstimatorLogin>
+		<NotesinEstimatorLogin>//div[@class='non-pad row m-t-md ng-binding']</NotesinEstimatorLogin>
+		<cancelwindow>//button[@ng-click='cancel()']</cancelwindow>
+		<reopentender>//div//button[@ng-click='submitTender()']</reopentender>
+		<managerole>//button[contains(text(),'Manage role')]</managerole>
+		<updatebutton>saveBtn</updatebutton>
+		<emailrolebox>//input[@class='ui-grid-filter-input ui-grid-filter-input-0']</emailrolebox>
+		<checkboxSelectedAll>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope ui-grid-all-selected']</checkboxSelectedAll>
+		<cancelLink>Cancel</cancelLink>
+		<CancelAddUser>//*[text()='Cancel']</CancelAddUser>
+		<nameinProfile>//label[text()='Name']</nameinProfile>
+		<phoneinProfile>//label[text()='Phone']</phoneinProfile>
+		<webinProfile>//label[text()='Website']</webinProfile>
+		<emailinprofile>//label[text()='Email']</emailinprofile>
+		<addressinprofile>//label[text()='Address']</addressinprofile>
+		<countyinprofile>//label[text()='County']</countyinprofile>
+		<countryinprofile>//label[text()='Country']</countryinprofile>
+		<postalinprofile>//label[text()='Postal code']</postalinprofile>
+		<namevalueprofile>//input[@name='orgName']</namevalueprofile>
+		<resetinprofile>//button[contains(text(),'Reset')]</resetinprofile>
+		<saveinprofile>//button[contains(text(),'changes')]</saveinprofile>
+		<locationprofile>//input[@ng-model='ngAddress']</locationprofile>
+		<locationLink>span[class=pac-matched]</locationLink>
+		<addresstextbox>//input[@value="{address.formattedAddress}"]</addresstextbox>
+		<tenderquickaccess>//div[@class='tree-folder-content']//a[@class='tree-item ng-scope']</tenderquickaccess>
+		<quicktenders>//h4//a[@class='ng-binding']</quicktenders>
+		<declinetender>//div//button[@ng-click='declineTender()']</declinetender>
+        <declinetenderreason>//list[@class='list-group']//li[@class='list-group-item non-border ng-binding ng-scope']//input[@ng-model='selectedReason.id']</declinetenderreason>
+		<confirmdecline>//div[@class='col-md-12']//button[@class='btn btn-primary' and @ng-click='confirmDeclineTender()']</confirmdecline>
+		<confirmdeclinesubmission>//div[@class='toast-message']//div[@class='col-md-11 ng-binding ng-scope']</confirmdeclinesubmission>
+		'<!--'<Pluslink>//div[@class='ng-scope' and @ng-if='!row.entity.subItems']//i[@class='ui-grid-icon-plus-squared']</Pluslink>'-->'
+		<UserCount>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope']</UserCount>
+		<updatebutton>saveBtn</updatebutton>
+		<emailrolebox>//input[@class='ui-grid-filter-input ui-grid-filter-input-0']</emailrolebox>
+		<checkboxSelectedAll>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope ui-grid-all-selected']</checkboxSelectedAll>
+		<cancelLink>Cancel</cancelLink>
+		<CancelAddRole>//button[text()='Cancel']</CancelAddRole>
+		<tenderstatus>//div[@class='ng-isolate-scope']//div[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]</tenderstatus>
+        <tendererorganisation>//button[text()='NewOrganisationname']</tendererorganisation>
+        <tenderstatusfordecline>//label[text()='Declined']</tenderstatusfordecline>
+        <activetender1>//a[text()='A - Preliminaries - A1303 - Temp Proppin']</activetender1>
+        <activetender2>//a[text()='A - Preliminaries - A1304 - Edge Protect']</activetender2>
+		<managerole>//button[contains(text(),'Manage role')]</managerole>
+		<updatebutton>saveBtn</updatebutton>
+		<emailrolebox>//input[@class='ui-grid-filter-input ui-grid-filter-input-0']</emailrolebox>
+		<checkboxSelectedAll>//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope ui-grid-all-selected']</checkboxSelectedAll>
+		<cancelLink>Cancel</cancelLink>
+		<CancelAddUser>//*[text()='Cancel']</CancelAddUser>
+		<tenderstatus>//div[@class='ng-isolate-scope']//div[starts-with(@class,'ui-grid-cell ng-scope ui-grid-coluiGrid')]</tenderstatus>
+		<changepassword>Change password</changepassword>
+		<changepasswordinputfield>//input[@placeholder='Current password']</changepasswordinputfield>
+		<currentpassword>//input[@placeholder='Current password']</currentpassword>
+		<newpassword>//input[@placeholder='New password']</newpassword>
+		<confirmnewpassword>//input[@placeholder='Confirm new password']</confirmnewpassword>
+		<changegpasswordbutton>//button[@type='submit']</changegpasswordbutton>
+		<toastmessage>//div[@class='toast-message']//div[@class='col-md-11 ng-binding ng-scope']</toastmessage>
+        <register>Sign up</register>
+        <contractorrole>//input[@value='Register']</contractorrole>
+        <selectmaincontractorrole>//strong[text()='Main Contractor']</selectmaincontractorrole>
+        <estimatorroles>//strong[@class='label-intense ng-binding']</estimatorroles>
+        <estimator-select>//input[@ng-model='user.role']</estimator-select>
+        <supplier-email>//input[@ng-model='profile.email']</supplier-email>
+        <supplier-password>//input[@ng-model='profile.password']</supplier-password>
+        <supplier-confirmpassword>//input[@ng-model='profile.cPassword']</supplier-confirmpassword>
+        <supplier-firstname>//input[@ng-model='profile.firstName']</supplier-firstname>
+        <supplier-lastname>//input[@ng-model='profile.lastName']</supplier-lastname>
+        <supplier-mobile>//input[@ng-model='profile.mobile']</supplier-mobile>
+        <supplier-phone>//input[@ng-model='profile.phone']</supplier-phone>
+        <supplier-role>//div[@class='form-group']//input[@class='form-control ng-isolate-scope ng-animate ng-pristine-remove ng-dirty-add ng-invalid-remove ng-valid-add ng-invalid-r-role-remove ng-pristine-remove-active ng-dirty ng-dirty-add-active ng-invalid-remove-active ng-valid ng-valid-add-active ng-invalid-r-role-remove-active ng-valid-r-role']</supplier-role>
+        <Nextbutton>//div[@class='col-md-12']//button[@class='btn btn-primary   pull-right pad-left' and @type='button']</Nextbutton>
+        <organisation-create>//div[@class='form-group']//span[@class='m-t-sm non-pad']//button[@class='btn btn-link' and @ng-click='createOrganisation()']</organisation-create>
+        <organisation-location>//div[@class='input-group']//*[(@classs,'form-control input-md ng-isolate-scope ng-pristine ng-valid')]//input[@type='text']</organisation-location>
+        <organisation-phone>//input[@ng-model='profile.organisation.phone']</organisation-phone>
+        <organisation-email>//input[@ng-model='profile.organisation.email']</organisation-email>
+        <organisation-website>//input[@ng-model='profile.organisation.website']</organisation-website>
+        <organisation-address>//input[@ng-model='profile.address.formattedAddress']</organisation-address>
+        <organisation-county>//input[@ng-model='profile.address.county']</organisation-county>
+        <organisation-country>//input[@ng-model='profile.address.country']</organisation-country>
+        <organisation-postalcode>//input[@ng-model='profile.address.postalCode']</organisation-postalcode>
+        <organisation-dropdownselect>//span[text()='Select your organisation']</organisation-dropdownselect>
+        <organisation-enter>//input[@ng-model='$select.search']</organisation-enter>
+        <organisation-select>//span[@ng-bind-html='organisation.accountName | highlight: $select.search']</organisation-select>
+        <supplier-company>//input[@ng-model='profile.organisation.accountName']</supplier-company>
+        <termsandconditions>//div[@class='form-group']//input[@type='checkbox']</termsandconditions>
+        <createaccount>//div[@class='col-md-12']//button[@type='submit']</createaccount>
+        <backtologin>//a[@class='btn btn-default' and @ui-sref='login']</backtologin>
+        <supplier_authorisation>User authorisation</supplier_authorisation>
+        <supplier-search>//div[@class='ng-scope']//input[@class='ui-grid-filter-input ui-grid-filter-input-0']</supplier-search>
+        <supplier-selection>//div[@class='ui-grid-cell-contents']//div[@class='ui-grid-selection-row-header-buttons ui-grid-icon-ok ng-scope' and @ng-click='selectButtonClick(row, $event)']</supplier-selection>
+        <emailvalidate>//div[@class='ng-isolate-scope']//div[@class='ui-grid-cell-contents ng-binding ng-scope']</emailvalidate>
+        <supplier_list>Users</supplier_list>
+        <supplier-accept>//div[@class='col-md-12']//div[@align='right']//button[@class='btn btn-primary']</supplier-accept>
+        <supplier-delete>Delete</supplier-delete>
+        <supplier-deleteconfirm>//div[@class='col-md-12']//button[@class='btn btn-primary' and @ng-click='deleteUser()']</supplier-deleteconfirm>
+        <suppliertext>//span[@class='ui-select-match-text pull-left']//span[@class='ng-binding ng-scope']</suppliertext>
+        <priceunrateditems>//input[@ng-model='unrated']</priceunrateditems>
+        <supplierlist>//span[@title='Suppliers']</supplierlist>
+        <applypriceunrateditems>//button[@name='saveBtn']</applypriceunrateditems>
+        <invalidlogin>//b[text()='Invalid login. Please try again!']</invalidlogin>
+        <messageafterunsuccessattempts>//b[text()='The maximum number of login attempts has been reached. Please try again in 5 minutes']</messageafterunsuccessattempts>
+
+	</eTender>
+
+</data>

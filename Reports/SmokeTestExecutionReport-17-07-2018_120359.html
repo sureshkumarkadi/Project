@@ -1,0 +1,4114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>eTender automation report</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+    font-size: 16pt;
+    color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>eTender automation report</h1>
+<p class='attribute'><strong>Start Time:</strong> 2018-07-17 12:03:59</p>
+<p class='attribute'><strong>Duration:</strong> 1:58:57.483000</p>
+<p class='attribute'><strong>Status:</strong> Pass 70 Failure 27</p>
+
+<p class='description'>Test Case Execution Results</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplate.Plantemplate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatecreationheading.Plantemplatecreationheading</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatecreationheading</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatecreation.Plantemplatecreation</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatecreation</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatecreationwithstages.Plantemplatecreationwithstages</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatecreationwithstages</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.1')" >
+        pass</a>
+
+    <div id='div_pt4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt4.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatealertmessage.Plantemplatealertmessage</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',1)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plantemplatealertmessage</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
+        pass</a>
+
+    <div id='div_pt5.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt5.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatedeletion.Plantemplatedeletion</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+</tr>
+
+<tr id='pt6.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatedeletion</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.1')" >
+        pass</a>
+
+    <div id='div_pt6.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateupdation.Plantemplateupdation</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c7',1)">Detail</a></td>
+</tr>
+
+<tr id='pt7.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateupdation</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt7.1')" >
+        pass</a>
+
+    <div id='div_pt7.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt7.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt7.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantenderview.Plantenderview</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c8',1)">Detail</a></td>
+</tr>
+
+<tr id='pt8.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantenderview</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt8.1')" >
+        pass</a>
+
+    <div id='div_pt8.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt8.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt8.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatecount.Plantemplatecount</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c9',1)">Detail</a></td>
+</tr>
+
+<tr id='pt9.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plantemplatecount</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt9.1')" >
+        pass</a>
+
+    <div id='div_pt9.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt9.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt9.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatechoose.Plantemplatechoose</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c10',1)">Detail</a></td>
+</tr>
+
+<tr id='pt10.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plantemplatechoose</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt10.1')" >
+        pass</a>
+
+    <div id='div_pt10.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt10.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt10.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateplanneddates.Plantemplateplanneddates</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c11',1)">Detail</a></td>
+</tr>
+
+<tr id='pt11.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateplanneddates</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt11.1')" >
+        pass</a>
+
+    <div id='div_pt11.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt11.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt11.1: PreStageURL
+['27-Jul-2018', '06-Aug-2018', '16-Aug-2018', '26-Aug-2018', '05-Sep-2018', '15-Sep-2018', '25-Sep-2018']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateforecastdates.Plantemplateforecastdates</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c12',1)">Detail</a></td>
+</tr>
+
+<tr id='pt12.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateforecastdates</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt12.1')" >
+        pass</a>
+
+    <div id='div_pt12.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt12.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt12.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateplannedexclamation.Plantemplateplannedexclamation</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c13',1)">Detail</a></td>
+</tr>
+
+<tr id='pt13.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateplannedexclamation</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt13.1')" >
+        pass</a>
+
+    <div id='div_pt13.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt13.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt13.1: PreStageURL
+&lt;selenium.webdriver.remote.webelement.WebElement (session="11108ac9578681e205fe31b7f1e9f29c", element="0.05752462118064261-24")&gt;
+&lt;selenium.webdriver.remote.webelement.WebElement (session="11108ac9578681e205fe31b7f1e9f29c", element="0.05752462118064261-25")&gt;
+Day is weekend hence planneddateexclamation is present
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateforecastexclamation.Plantemplateforecastexclamation</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c14',1)">Detail</a></td>
+</tr>
+
+<tr id='pt14.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateforecastexclamation</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt14.1')" >
+        pass</a>
+
+    <div id='div_pt14.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt14.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt14.1: PreStageURL
+&lt;selenium.webdriver.remote.webelement.WebElement (session="e6410d2773bd119d4e1c4db1dc0d993e", element="0.981905540421971-24")&gt;
+&lt;selenium.webdriver.remote.webelement.WebElement (session="e6410d2773bd119d4e1c4db1dc0d993e", element="0.981905540421971-25")&gt;
+Day is weekend hence forecastdateexclamation is present
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagdelete.Plantemplatestagdelete</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c15',1)">Detail</a></td>
+</tr>
+
+<tr id='pt15.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagdelete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt15.1')" >
+        pass</a>
+
+    <div id='div_pt15.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt15.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt15.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagaddition.Plantemplatestagaddition</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c16',1)">Detail</a></td>
+</tr>
+
+<tr id='pt16.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagaddition</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt16.1')" >
+        pass</a>
+
+    <div id='div_pt16.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt16.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt16.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagadditiondatecheck.Plantemplatestagadditiondatecheck</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c17',1)">Detail</a></td>
+</tr>
+
+<tr id='pt17.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagadditiondatecheck</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt17.1')" >
+        pass</a>
+
+    <div id='div_pt17.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt17.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt17.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagdurationupdation.Plantemplatestagdurationupdation</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c18',1)">Detail</a></td>
+</tr>
+
+<tr id='pt18.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagdurationupdation</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt18.1')" >
+        pass</a>
+
+    <div id='div_pt18.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt18.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt18.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatenotesforallstages.Plantemplatenotesforallstages</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c19',1)">Detail</a></td>
+</tr>
+
+<tr id='pt19.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatenotesforallstages</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt19.1')" >
+        pass</a>
+
+    <div id='div_pt19.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt19.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt19.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatenotesupdate.Plantemplatenotesupdate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c20',1)">Detail</a></td>
+</tr>
+
+<tr id='pt20.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatenotesupdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt20.1')" >
+        pass</a>
+
+    <div id='div_pt20.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt20.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt20.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatenotesdelete.Plantemplatenotesdelete</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c21',1)">Detail</a></td>
+</tr>
+
+<tr id='pt21.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatenotesdelete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt21.1')" >
+        pass</a>
+
+    <div id='div_pt21.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt21.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt21.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatenotesforfirststag.Plantemplatenotesforfirststag</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c22',1)">Detail</a></td>
+</tr>
+
+<tr id='pt22.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatenotesforfirststag</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt22.1')" >
+        pass</a>
+
+    <div id='div_pt22.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt22.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt22.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagnotesupdate.Plantemplatestagnotesupdate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c23',1)">Detail</a></td>
+</tr>
+
+<tr id='pt23.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagnotesupdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt23.1')" >
+        pass</a>
+
+    <div id='div_pt23.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt23.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt23.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagnotesdelete.Plantemplatestagnotesdelete</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c24',1)">Detail</a></td>
+</tr>
+
+<tr id='pt24.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagnotesdelete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt24.1')" >
+        pass</a>
+
+    <div id='div_pt24.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt24.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt24.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatesave.Plantemplatesave</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c25',1)">Detail</a></td>
+</tr>
+
+<tr id='pt25.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatesave</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt25.1')" >
+        pass</a>
+
+    <div id='div_pt25.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt25.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt25.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateactualforecastdates.Plantemplateactualforecastdates</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c26',1)">Detail</a></td>
+</tr>
+
+<tr id='pt26.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateactualforecastdates</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt26.1')" >
+        pass</a>
+
+    <div id='div_pt26.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt26.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt26.1: PreStageURL
+['27-Jul-2018', '06-Aug-2018', '16-Aug-2018', '26-Aug-2018', '05-Sep-2018', '15-Sep-2018']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateactualresetplanned.Plantemplateactualresetplanned</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c27',1)">Detail</a></td>
+</tr>
+
+<tr id='pt27.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplateactualresetplanned</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt27.1')" >
+        pass</a>
+
+    <div id='div_pt27.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt27.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt27.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestagstatuscompleted.Plantemplatestagstatuscompleted</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c28',1)">Detail</a></td>
+</tr>
+
+<tr id='pt28.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Plantemplatestagstatuscompleted</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt28.1')" >
+        pass</a>
+
+    <div id='div_pt28.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt28.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt28.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplatestartasforecastdate.Plantemplatestartasforecastdate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c29',1)">Detail</a></td>
+</tr>
+
+<tr id='pt29.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plantemplatestartasforecastdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt29.1')" >
+        pass</a>
+
+    <div id='div_pt29.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt29.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt29.1: PreStageURL
+['27-Jul-2018', '06-Aug-2018', '16-Aug-2018', '26-Aug-2018', '05-Sep-2018', '15-Sep-2018', '25-Sep-2018']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>plantemplateAutofillstartasforecastdate.PlantemplateAutofillstartasforecastdate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c30',1)">Detail</a></td>
+</tr>
+
+<tr id='pt30.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_plantemplateAutofillstartasforecastdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt30.1')" >
+        pass</a>
+
+    <div id='div_pt30.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt30.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt30.1: PreStageURL
+['27-Jul-2018', '06-Aug-2018', '16-Aug-2018', '26-Aug-2018', '05-Sep-2018', '15-Sep-2018', '25-Sep-2018']
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>plantemplateAutofillduedateasforecastdate.PlantemplateAutofillduedateasforecastdate</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c31',1)">Detail</a></td>
+</tr>
+
+<tr id='ft31.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_plantemplateAutofillduedateasforecastdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft31.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_plantemplateAutofillduedateasforecastdate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft31.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft31.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft31.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\plantemplateAutofillduedateasforecastdate.py", line 111, in test_plantemplateAutofillduedateasforecastdate
+    self.assertEqual(forecastdatestag6.strip(),dateafter10days[0])
+  File "C:\Python27\lib\unittest\case.py", line 513, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python27\lib\unittest\case.py", line 506, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: u'18-Jul-2018' != '18-Jun-2018'
+Traceback (most recent call last):
+  File "E:\etender\TestScript\plantemplateAutofillduedateasforecastdate.py", line 137, in test_plantemplateAutofillduedateasforecastdate
+    self.fail("Test Case No: 100321 failed")
+AssertionError: Test Case No: 100321 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalconiesTrade.TendercreationBalconiesTrade</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c32',1)">Detail</a></td>
+</tr>
+
+<tr id='pt32.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalconiesTrade</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt32.1')" >
+        pass</a>
+
+    <div id='div_pt32.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt32.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt32.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalconiesSupplier.TendercreationBalconiesSupplier</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c33',1)">Detail</a></td>
+</tr>
+
+<tr id='pt33.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalconiesSupplier</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt33.1')" >
+        pass</a>
+
+    <div id='div_pt33.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt33.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt33.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalustradingMaterial.TendercreationBalustradingMaterial</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c34',1)">Detail</a></td>
+</tr>
+
+<tr id='pt34.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalustradingMaterial</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt34.1')" >
+        pass</a>
+
+    <div id='div_pt34.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt34.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt34.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalustradingTrade.TendercreationBalustradingTrade</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c35',1)">Detail</a></td>
+</tr>
+
+<tr id='pt35.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalustradingTrade</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt35.1')" >
+        pass</a>
+
+    <div id='div_pt35.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt35.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt35.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalustradingSupplier.TendercreationBalustradingSupplier</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c36',1)">Detail</a></td>
+</tr>
+
+<tr id='pt36.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalustradingSupplier</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt36.1')" >
+        pass</a>
+
+    <div id='div_pt36.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt36.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt36.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalconiesMaterial.TendercreationBalconiesMaterial</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c37',1)">Detail</a></td>
+</tr>
+
+<tr id='pt37.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalconiesMaterial</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt37.1')" >
+        pass</a>
+
+    <div id='div_pt37.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt37.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt37.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tendercreationBalustradingDuplicate.TendercreationBalustradingDuplicate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c38',1)">Detail</a></td>
+</tr>
+
+<tr id='pt38.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TendercreationBalustradingDuplicate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt38.1')" >
+        pass</a>
+
+    <div id='div_pt38.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt38.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt38.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>warningwhennorates.Warningwhennorates</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c39',1)">Detail</a></td>
+</tr>
+
+<tr id='pt39.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Warningwhennorates</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt39.1')" >
+        pass</a>
+
+    <div id='div_pt39.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt39.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt39.1: PreStageURL
+submitButton
+Tender acceptance
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderdefaultitem.Tenderdefaultitem</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c40',1)">Detail</a></td>
+</tr>
+
+<tr id='pt40.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Tenderdefaultitem</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt40.1')" >
+        pass</a>
+
+    <div id='div_pt40.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt40.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt40.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderedititemdefault.Tenderedititemdefault</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c41',1)">Detail</a></td>
+</tr>
+
+<tr id='pt41.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Tenderedititemdefault</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt41.1')" >
+        pass</a>
+
+    <div id='div_pt41.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt41.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt41.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderadditem.Tenderadditem</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c42',1)">Detail</a></td>
+</tr>
+
+<tr id='pt42.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Tenderadditem</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt42.1')" >
+        pass</a>
+
+    <div id='div_pt42.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt42.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt42.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderitemupdate.Tenderitemupdate</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c43',1)">Detail</a></td>
+</tr>
+
+<tr id='ft43.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_Tenderitemupdate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft43.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_Tenderitemupdate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft43.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft43.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft43.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderitemupdate.py", line 87, in test_Tenderitemupdate
+    self.assertEqual(itemsintender[0].text,'2A')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderitemupdate.py", line 110, in test_Tenderitemupdate
+    self.fail("Test Case No: 100312 failed")
+AssertionError: Test Case No: 100312 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderitemdelete.Tenderitemdelete</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c44',1)">Detail</a></td>
+</tr>
+
+<tr id='pt44.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Tenderitemdelete</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt44.1')" >
+        pass</a>
+
+    <div id='div_pt44.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt44.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt44.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderitemintenderpage.Tenderitemintenderpage</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c45',1)">Detail</a></td>
+</tr>
+
+<tr id='ft45.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_Tenderitemintenderpage</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft45.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_Tenderitemintenderpage.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft45.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft45.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft45.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderitemintenderpage.py", line 90, in test_Tenderitemintenderpage
+    self.assertEqual(itemsintender[1].text,'10 mm brick')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderitemintenderpage.py", line 100, in test_Tenderitemintenderpage
+    self.fail("Test Case No: 100314 failed")
+AssertionError: Test Case No: 100314 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderitemselectcount.Tenderitemselectcount</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c46',1)">Detail</a></td>
+</tr>
+
+<tr id='pt46.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Tenderitemselectcount</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt46.1')" >
+        pass</a>
+
+    <div id='div_pt46.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt46.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt46.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderlistviewafterdeleteitem.Tenderlistviewafterdeleteitem</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c47',1)">Detail</a></td>
+</tr>
+
+<tr id='ft47.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_Tenderlistviewafterdeleteitem</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft47.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_Tenderlistviewafterdeleteitem.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft47.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft47.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft47.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderlistviewafterdeleteitem.py", line 90, in test_Tenderlistviewafterdeleteitem
+    self.assertEqual(itemvalidateafterdelete[1].text,'General works')
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderlistviewafterdeleteitem.py", line 102, in test_Tenderlistviewafterdeleteitem
+    self.fail("Test Case No: 100316 failed")
+AssertionError: Test Case No: 100316 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>viewdeleteditemsinestimator.Viewdeleteditemsinestimator</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c48',1)">Detail</a></td>
+</tr>
+
+<tr id='pt48.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_viewdeleteditemsinestimator</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt48.1')" >
+        pass</a>
+
+    <div id='div_pt48.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt48.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt48.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>viewdeleteditemsinsupplier.Viewdeleteditemsinsupplier</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c49',1)">Detail</a></td>
+</tr>
+
+<tr id='pt49.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_viewdeleteditemsinsupplier</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt49.1')" >
+        pass</a>
+
+    <div id='div_pt49.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt49.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt49.1: PreStageURL
+submitButton
+Tender acceptance
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>viewnewbillitems.Viewnewbillitems</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c50',1)">Detail</a></td>
+</tr>
+
+<tr id='pt50.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_viewnewbillitems</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt50.1')" >
+        pass</a>
+
+    <div id='div_pt50.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt50.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt50.1: PreStageURL
+submitButton
+Tender acceptance
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>tenderverificationOFF.TenderverificationOFF</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c51',1)">Detail</a></td>
+</tr>
+
+<tr id='pt51.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_TenderverificationOFF</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt51.1')" >
+        pass</a>
+
+    <div id='div_pt51.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt51.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt51.1: PreStageURL
+submitButton
+Tender acceptance
+Tender verification button is not present
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderverificationONStatus.TenderverificationONStatus</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c52',1)">Detail</a></td>
+</tr>
+
+<tr id='ft52.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderverificationONStatus</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft52.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderverificationONStatus.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft52.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft52.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft52.1: PreStageURL
+submitButton
+Tender acceptance
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationONStatus.py", line 79, in test_TenderverificationONStatus
+    browser = tenderDetails_submit.submitTender(browser)
+  File "E:\etender\Library\tenderDetails.py", line 990, in submitTender
+    submittender_button.click()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 501, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationONStatus.py", line 106, in test_TenderverificationONStatus
+    self.fail("Test Case No: 100383 failed")
+AssertionError: Test Case No: 100383 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderverificationONSupplierStatus.TenderverificationONSupplierStatus</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c53',1)">Detail</a></td>
+</tr>
+
+<tr id='ft53.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderverificationONSupplierStatus</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft53.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderverificationONSupplierStatus.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft53.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft53.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft53.1: PreStageURL
+submitButton
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationONSupplierStatus.py", line 65, in test_TenderverificationONSupplierStatus
+    tenderverifySupplierstatus = browser.find_element_by_xpath(tenderverifySupplierstatus_path) #Webelement for values
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//small[text()='Review pending']"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationONSupplierStatus.py", line 73, in test_TenderverificationONSupplierStatus
+    self.fail("Test Case No: 100358 failed")
+AssertionError: Test Case No: 100358 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderverificationON.TenderverificationON</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c54',1)">Detail</a></td>
+</tr>
+
+<tr id='ft54.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderverificationON</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft54.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderverificationON.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft54.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft54.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft54.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationON.py", line 69, in test_TenderverificationON
+    self.assertEqual(tenderverifybutton[2].text,'Verify' )
+  File "C:\Python27\lib\unittest\case.py", line 513, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python27\lib\unittest\case.py", line 506, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: u'' != 'Verify'
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverificationON.py", line 75, in test_TenderverificationON
+    self.fail("Test Case No: 100356 failed")
+AssertionError: Test Case No: 100356 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>tenderverifiedON.TenderverifiedON</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c55',1)">Detail</a></td>
+</tr>
+
+<tr id='ft55.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderverifiedON</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft55.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderverifiedON.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft55.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft55.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft55.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverifiedON.py", line 64, in test_TenderverifiedON
+    browser = tenderDetails.tenderverifyconfirm(browser)
+  File "E:\etender\Library\tenderDetails.py", line 863, in tenderverifyconfirm
+    tenderverifyconfirm = browser.find_element_by_xpath(tenderverifyconfirm_path)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@ng-click='acceptTenderReview()']"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\tenderverifiedON.py", line 81, in test_TenderverifiedON
+    self.fail("Test Case No: 100383 failed")
+AssertionError: Test Case No: 100383 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>selectalldocuments.Selectalldocuments</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c56',1)">Detail</a></td>
+</tr>
+
+<tr id='pt56.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_selectalldocuments</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt56.1')" >
+        pass</a>
+
+    <div id='div_pt56.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt56.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt56.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>addhyperlinkdisplayed.Addhyperlinkdisplayed</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c57',1)">Detail</a></td>
+</tr>
+
+<tr id='pt57.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addhyperlinkdisplayed</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt57.1')" >
+        pass</a>
+
+    <div id='div_pt57.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt57.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt57.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>hyperlinklabels.Hyperlinklabels</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c58',1)">Detail</a></td>
+</tr>
+
+<tr id='pt58.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_hyperlinklabels</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt58.1')" >
+        pass</a>
+
+    <div id='div_pt58.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt58.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt58.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>addURLasFile.AddURLasFile</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c59',1)">Detail</a></td>
+</tr>
+
+<tr id='pt59.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addURLasFile</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt59.1')" >
+        pass</a>
+
+    <div id='div_pt59.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt59.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt59.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>documentlinkfileURL.DocumentlinkfileURL</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c60',1)">Detail</a></td>
+</tr>
+
+<tr id='pt60.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_documentlinkfileURL</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt60.1')" >
+        pass</a>
+
+    <div id='div_pt60.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt60.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt60.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>addInternalURL.AddInternalURL</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c61',1)">Detail</a></td>
+</tr>
+
+<tr id='pt61.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addInternalURL</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt61.1')" >
+        pass</a>
+
+    <div id='div_pt61.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt61.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt61.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>internaldocumentlinkfileURL.InternaldocumentlinkfileURL</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c62',1)">Detail</a></td>
+</tr>
+
+<tr id='pt62.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_internaldocumentlinkfileURL</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt62.1')" >
+        pass</a>
+
+    <div id='div_pt62.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt62.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt62.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>addexternalURL.AddexternalURL</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c63',1)">Detail</a></td>
+</tr>
+
+<tr id='pt63.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_addexternalURL</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt63.1')" >
+        pass</a>
+
+    <div id='div_pt63.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt63.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt63.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>externaldocumentlinkfileURL.ExternaldocumentlinkfileURL</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c64',1)">Detail</a></td>
+</tr>
+
+<tr id='pt64.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_externaldocumentlinkfileURL</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt64.1')" >
+        pass</a>
+
+    <div id='div_pt64.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt64.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt64.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>pendingtradefilter.Pendingtradefilter</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c65',1)">Detail</a></td>
+</tr>
+
+<tr id='pt65.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_pendingtradefilter</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt65.1')" >
+        pass</a>
+
+    <div id='div_pt65.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt65.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt65.1: PreStageURL
+submitButton
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 1
+Pending trades: 2
+Pending trades: 1
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invitecolleague.Invitecolleague</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c66',1)">Detail</a></td>
+</tr>
+
+<tr id='pt66.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invitecolleague</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt66.1')" >
+        pass</a>
+
+    <div id='div_pt66.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt66.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt66.1: PreStageURL
+submitButton
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invitecolleaguelink.Invitecolleaguelink</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c67',1)">Detail</a></td>
+</tr>
+
+<tr id='pt67.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invitecolleaguelink</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt67.1')" >
+        pass</a>
+
+    <div id='div_pt67.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt67.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt67.1: PreStageURL
+submitButton
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>verifycolleaguelist.Verifycolleaguelist</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c68',1)">Detail</a></td>
+</tr>
+
+<tr id='pt68.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_verifycolleaguelist</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt68.1')" >
+        pass</a>
+
+    <div id='div_pt68.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt68.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt68.1: PreStageURL
+submitButton
+Tender acceptance
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invitecolleaguenotinthelist.Invitecolleaguenotinthelist</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c69',1)">Detail</a></td>
+</tr>
+
+<tr id='pt69.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invitecolleaguenotinthelist</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt69.1')" >
+        pass</a>
+
+    <div id='div_pt69.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt69.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt69.1: PreStageURL
+submitButton
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invitecolleaguesearch.Invitecolleaguesearch</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c70',1)">Detail</a></td>
+</tr>
+
+<tr id='pt70.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invitecolleaguesearch</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt70.1')" >
+        pass</a>
+
+    <div id='div_pt70.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt70.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt70.1: PreStageURL
+submitButton
+pass
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invitecolleagueloggeduser.Invitecolleagueloggeduser</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c71',1)">Detail</a></td>
+</tr>
+
+<tr id='pt71.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invitecolleagueloggeduser</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt71.1')" >
+        pass</a>
+
+    <div id='div_pt71.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt71.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt71.1: PreStageURL
+submitButton
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>AT_NotificationTemplateCancel.NotificationTemplateCancel</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c72',1)">Detail</a></td>
+</tr>
+
+<tr id='pt72.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_MessageTemplateCancel</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt72.1')" >
+        pass</a>
+
+    <div id='div_pt72.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt72.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt72.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>AT_NotificationTemplateSave.NotificationTemplateSave</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c73',1)">Detail</a></td>
+</tr>
+
+<tr id='pt73.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_MessageTemplateSave</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt73.1')" >
+        pass</a>
+
+    <div id='div_pt73.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt73.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt73.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>AT_NotificationMessageTemplate.NotificationMessageTemplate</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c74',1)">Detail</a></td>
+</tr>
+
+<tr id='pt74.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_MessageTemplateOption</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt74.1')" >
+        pass</a>
+
+    <div id='div_pt74.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt74.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt74.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>AT_NotificationMessageOption.NotificationMessageOption</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c75',1)">Detail</a></td>
+</tr>
+
+<tr id='pt75.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_MessageOption</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt75.1')" >
+        pass</a>
+
+    <div id='div_pt75.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt75.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt75.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_TenderCreation.TenderCreationClass</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c76',1)">Detail</a></td>
+</tr>
+
+<tr id='ft76.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderCreationfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft76.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderCreationfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft76.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft76.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft76.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderCreation.py", line 53, in test_TenderCreationfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderCreation.py", line 66, in test_TenderCreationfunction
+    self.fail("Test Case No: 100196 failed")
+AssertionError: Test Case No: 100196 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_TenderDeletion.TenderDeletionClass</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c77',1)">Detail</a></td>
+</tr>
+
+<tr id='ft77.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderDeletionfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft77.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderDeletionfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft77.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft77.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft77.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderDeletion.py", line 54, in test_TenderDeletionfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderDeletion.py", line 69, in test_TenderDeletionfunction
+    self.fail("Test Case No: 100198 failed")
+AssertionError: Test Case No: 100198 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_TenderUpdation.TenderUpdationClass</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c78',1)">Detail</a></td>
+</tr>
+
+<tr id='ft78.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderUpdationfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft78.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderUpdationfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft78.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft78.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft78.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderUpdation.py", line 54, in test_TenderUpdationfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderUpdation.py", line 69, in test_TenderUpdationfunction
+    self.fail("Test Case No: 100199 failed")
+AssertionError: Test Case No: 100199 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_ResetTender.TenderResetClass</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c79',1)">Detail</a></td>
+</tr>
+
+<tr id='ft79.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderResetfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft79.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderResetfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft79.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft79.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft79.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ResetTender.py", line 54, in test_TenderResetfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ResetTender.py", line 67, in test_TenderResetfunction
+    self.fail("Test Case No: 100211 failed")
+AssertionError: Test Case No: 100211 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_BackToTenderlist.TenderList</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c80',1)">Detail</a></td>
+</tr>
+
+<tr id='ft80.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderListfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft80.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderListfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft80.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft80.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft80.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_BackToTenderlist.py", line 54, in test_TenderListfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_BackToTenderlist.py", line 70, in test_TenderListfunction
+    self.fail("Test Case No: 100212 failed")
+AssertionError: Test Case No: 100212 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_SupplierLookup.SupplierLookup</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c81',1)">Detail</a></td>
+</tr>
+
+<tr id='ft81.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_Supplierfunction</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft81.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_Supplierfunction.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft81.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft81.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft81.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_SupplierLookup.py", line 55, in test_Supplierfunction
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_SupplierLookup.py", line 73, in test_Supplierfunction
+    self.fail("Test Case No: 100232 failed")
+AssertionError: Test Case No: 100232 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_PlanTemplateAlreadySelected.PlanTemplateSelected</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c82',1)">Detail</a></td>
+</tr>
+
+<tr id='ft82.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TemplateSelected</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft82.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TemplateSelected.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft82.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft82.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft82.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_PlanTemplateAlreadySelected.py", line 55, in test_TemplateSelected
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_PlanTemplateAlreadySelected.py", line 90, in test_TemplateSelected
+    self.fail("Test Case No: 100281 failed")
+AssertionError: Test Case No: 100281 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_StageCompletedStatus.StatusStageCompleted</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c83',1)">Detail</a></td>
+</tr>
+
+<tr id='ft83.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_StageCompleted</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft83.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_StageCompleted.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft83.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft83.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft83.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageCompletedStatus.py", line 54, in test_StageCompleted
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageCompletedStatus.py", line 93, in test_StageCompleted
+    self.fail("Test Case No: 100276 failed")
+AssertionError: Test Case No: 100276 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_StageCompletedLateStatus.StatusStageCompletedLate</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c84',1)">Detail</a></td>
+</tr>
+
+<tr id='ft84.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_StageCompletedLate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft84.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_StageCompletedLate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft84.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft84.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft84.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageCompletedLateStatus.py", line 54, in test_StageCompletedLate
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageCompletedLateStatus.py", line 94, in test_StageCompletedLate
+    self.fail("Test Case No: 100289 failed")
+AssertionError: Test Case No: 100289 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_StageOntimeStatus.StageOntimeStatus</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c85',1)">Detail</a></td>
+</tr>
+
+<tr id='ft85.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_OntimeStatus</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft85.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_OntimeStatus.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft85.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft85.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft85.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageOntimeStatus.py", line 54, in test_OntimeStatus
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StageOntimeStatus.py", line 84, in test_OntimeStatus
+    self.fail("Test Case No: 100288 failed")
+AssertionError: Test Case No: 100288 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_StatusActualDateCancel.ActualDateCancel</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c86',1)">Detail</a></td>
+</tr>
+
+<tr id='ft86.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_CancelDate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft86.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_CancelDate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft86.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft86.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft86.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StatusActualDateCancel.py", line 54, in test_CancelDate
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StatusActualDateCancel.py", line 89, in test_CancelDate
+    self.fail("Test Case No: 100286 failed")
+AssertionError: Test Case No: 100286 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_StartDateAsForeCast.StartDateAsForecast</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c87',1)">Detail</a></td>
+</tr>
+
+<tr id='ft87.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_ForeCastDate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft87.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_ForeCastDate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft87.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft87.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft87.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StartDateAsForeCast.py", line 56, in test_ForeCastDate
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_StartDateAsForeCast.py", line 90, in test_ForeCastDate
+    self.fail("Test Case No: 100306 failed")
+AssertionError: Test Case No: 100306 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_DueDateAsForeCast.DueDateAsForecast</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c88',1)">Detail</a></td>
+</tr>
+
+<tr id='ft88.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_DueCastDate</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft88.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_DueCastDate.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft88.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft88.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft88.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_DueDateAsForeCast.py", line 56, in test_DueCastDate
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_DueDateAsForeCast.py", line 90, in test_DueCastDate
+    self.fail("Test Case No: 100307 failed")
+AssertionError: Test Case No: 100307 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_ExportToExcel.ExportToExcel</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c89',1)">Detail</a></td>
+</tr>
+
+<tr id='ft89.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_ExcelExport</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft89.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_ExcelExport.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft89.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft89.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft89.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ExportToExcel.py", line 60, in test_ExcelExport
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ExportToExcel.py", line 98, in test_ExcelExport
+    self.fail("Test Case No: 100301 failed")
+AssertionError: Test Case No: 100301 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_ResponseToExcel.ExportToDetailsExcel</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c90',1)">Detail</a></td>
+</tr>
+
+<tr id='ft90.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_ExcelDetailsExport</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft90.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_ExcelDetailsExport.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft90.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft90.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft90.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ResponseToExcel.py", line 60, in test_ExcelDetailsExport
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_ResponseToExcel.py", line 85, in test_ExcelDetailsExport
+    self.fail("Test Case No: 100341 failed")
+AssertionError: Test Case No: 100341 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_FootnoteSettings.FootNoteClass</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c91',1)">Detail</a></td>
+</tr>
+
+<tr id='ft91.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_FootNote</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft91.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_FootNote.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft91.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft91.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft91.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_FootnoteSettings.py", line 62, in test_FootNote
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_FootnoteSettings.py", line 94, in test_FootNote
+    self.fail("Test Case No: 100355 failed")
+AssertionError: Test Case No: 100355 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_EmailSetupPageverification.EmailSetupPage</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c92',1)">Detail</a></td>
+</tr>
+
+<tr id='ft92.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_SetupEmailPage</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft92.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_SetupEmailPage.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft92.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft92.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft92.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_EmailSetupPageverification.py", line 59, in test_SetupEmailPage
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_EmailSetupPageverification.py", line 77, in test_SetupEmailPage
+    self.fail("Test Case No: 100361 failed")
+AssertionError: Test Case No: 100361 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_TenderReturnSaveSettings.TenderVerifySave</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c93',1)">Detail</a></td>
+</tr>
+
+<tr id='ft93.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderReturnSaveVerify</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft93.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderReturnSaveVerify.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft93.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft93.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft93.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderReturnSaveSettings.py", line 62, in test_TenderReturnSaveVerify
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderReturnSaveSettings.py", line 102, in test_TenderReturnSaveVerify
+    self.fail("Test Case No: 100381 failed")
+AssertionError: Test Case No: 100381 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='failClass'>
+    <td>AT_TenderReturnResetSettings.TenderVerifyReset</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c94',1)">Detail</a></td>
+</tr>
+
+<tr id='ft94.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_TenderReturnVerifyReset</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft94.1')" >
+        fail</a>
+    &nbsp&nbsp&nbsp&nbsp<a href="file://bg-ces-win8/etender\Screenshots\Testcase-test_TenderReturnVerifyReset.png" target="_blank">ScreenShot</a>
+
+    <div id='div_ft94.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft94.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft94.1: PreStageURL
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderReturnResetSettings.py", line 61, in test_TenderReturnVerifyReset
+    LauncheTender.switchOrganisation(browser)
+  File "E:\etender\Library\launcheTender.py", line 259, in switchOrganisation
+    switchOrganisation_link = browser.find_element_by_link_text(switchOrganisation_path) # Select switchOrganisation
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 389, in find_element_by_link_text
+    return self.find_element(by=By.LINK_TEXT, value=link_text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Switch organisation"}
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64)
+
+Traceback (most recent call last):
+  File "E:\etender\TestScript\AT_TenderReturnResetSettings.py", line 95, in test_TenderReturnVerifyReset
+    self.fail("Test Case No: 100382 failed")
+AssertionError: Test Case No: 100382 failed
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>estimatorinvalidpassword.Estimatorinvalidpassword</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c95',1)">Detail</a></td>
+</tr>
+
+<tr id='pt95.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_estimatorinvalidpassword</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt95.1')" >
+        pass</a>
+
+    <div id='div_pt95.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt95.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt95.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>invalidloginattemptafter5times.Invalidloginattemptafter5times</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c96',1)">Detail</a></td>
+</tr>
+
+<tr id='pt96.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_invalidloginattemptafter5times</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt96.1')" >
+        pass</a>
+
+    <div id='div_pt96.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt96.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt96.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>loginattemptafter5mins.Loginattemptafter5mins</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c97',1)">Detail</a></td>
+</tr>
+
+<tr id='pt97.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_loginattemptafter5mins</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt97.1')" >
+        pass</a>
+
+    <div id='div_pt97.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt97.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt97.1: PreStageURL
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>97</td>
+    <td>70</td>
+    <td>27</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
