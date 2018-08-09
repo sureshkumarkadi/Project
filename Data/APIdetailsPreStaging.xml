@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <username>Estimator@etender.com</username>
+        <password>Estimator</password>
+        <tenderID>43248</tenderID>
+        <tendererReferenceID>8717</tendererReferenceID>
+        <projectname>ProjectfromRESTAPI</projectname>
+        <projectdescription>ProjectfromRESTAPI</projectdescription>
+        <projectRef>ProjectfromRESTAPI</projectRef>
+
+    </eTender>
+</data>

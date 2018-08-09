@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <updateprojectname>project</updateprojectname>
+        <updateprojectRef>projectRef</updateprojectRef>
+        <projectcurrency>British</projectcurrency>
+        <projectcurrencyUS>US</projectcurrencyUS>
+        <updateprojectvalue>200</updateprojectvalue>
+        <projectcurrencycode>GBP</projectcurrencycode>
+        <documentnameURLasfile>URLasfile</documentnameURLasfile>
+        <internaldocumentnameURLasfile>InternalURLasfile</internaldocumentnameURLasfile>
+        <externaldocumentnameURLasfile>ExternalURLasfile</externaldocumentnameURLasfile>
+        <documentaddressURLasfile>http://bg-etender-fs:8080/fileserver/api/file/raw/5a7445cd0ee3c5610bdcde35</documentaddressURLasfile>
+        <internaldocumentaddressURLasfile>https://jira.causeway.com/secure/attachment/47719/JSON%20Object.txt</internaldocumentaddressURLasfile>
+        <externaldocumentaddressURLasfile>https://drive.google.com/file/d/0BxabpQwGNM-aWnJzVTNIRHN3LUU/view?ths=true</externaldocumentaddressURLasfile>
+
+    </eTender>
+</data>

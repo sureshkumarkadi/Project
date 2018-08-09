@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+        <salutation>Mr</salutation>
+        <userfirstname>suresh1</userfirstname>
+        <userlastname>kumar1</userlastname>
+        <jobtitle>Estimator</jobtitle>
+        <mobilenumber>9342733658</mobilenumber>
+        <phonenumber>080124578</phonenumber>
+        <linkedin>suresh@linked.in</linkedin>
+        <orgphone>08025226964</orgphone>
+        <orgwebsite>www.downermouchelTest.com</orgwebsite>
+        <orgEmail>nagendra123@etender.com</orgEmail>
+        <userfirstname1>nagendra</userfirstname1>
+        <userlastname1>nag</userlastname1>
+
+    </eTender>
+</data>

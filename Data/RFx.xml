@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+		<question1>Have you ISO Certified?</question1>
+        <question2>Do you have template format?</question2>
+        <question3>Are you Big contractor or Small?</question3>
+        <question4>Upload relevent files</question4>
+        <answer1>Yes , We are ISO certified</answer1>
+
+	</eTender>
+</data>

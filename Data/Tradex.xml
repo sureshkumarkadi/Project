@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <tradexsupplier>Hanks Civils Ltd</tradexsupplier>
+        <tenderplan>Add suppliers</tenderplan>
+        <supplier>New supplier</supplier>
+        <newsuppliername>Richwood</newsuppliername>
+        <newsupplieremail>mathewj@etender.com</newsupplieremail>
+        <newusername>plywood</newusername>
+        <newuseremail>plywood@newuser.com</newuseremail>
+        <tradexstatus>Xandra</tradexstatus>
+
+    </eTender>
+</data>

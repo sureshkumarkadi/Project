@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<data>
+	<eTender>
+		<TradeType>TRADE</TradeType>
+		<OrgnaziationName>DownerMouchel</OrgnaziationName>
+		<TradeList>Tender listing</TradeList>
+		<TemplateData>Automation Plan</TemplateData>
+		<StageData>Automation Stage</StageData>
+		<CStagestatus>Completed</CStagestatus>
+		<LStageStatus>Completed late</LStageStatus>
+		<OStagestatus>On time</OStagestatus>
+		<ExportFileName>project_plan.xlsx</ExportFileName>
+		<ExportDetailsFileName>tender_response.xlsx</ExportDetailsFileName>
+	</eTender>
+</data>

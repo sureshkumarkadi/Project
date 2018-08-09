@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <username>nagendra@etender.com</username>
+        <password>nag</password>
+        <tenderID>19034</tenderID>
+        <tendererReferenceID>5888</tendererReferenceID>
+        <projectname>ProjectfromRESTAPI</projectname>
+        <projectdescription>ProjectfromRESTAPI</projectdescription>
+        <projectRef>ProjectfromRESTAPI</projectRef>
+
+    </eTender>
+</data>

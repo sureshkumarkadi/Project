@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <itemref>1A</itemref>
+        <itemdescription>10 mm brick</itemdescription>
+        <itemqty>10</itemqty>
+        <itemunit>Hr</itemunit>
+        <itemrate>34</itemrate>
+
+        <itemrefupdate>2A</itemrefupdate>
+        <itemdescriptionupdate>20 mm brick</itemdescriptionupdate>
+        <itemqtyupdate>20</itemqtyupdate>
+        <itemunitupdate>m3</itemunitupdate>
+        <itemrateupdate>50</itemrateupdate>
+        <emailnotinthelist>2000@etender.com</emailnotinthelist>
+        <emailsearch>dummy12@</emailsearch>
+
+    </eTender>
+</data>

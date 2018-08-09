@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+	<eTender>
+		<templatename>procurement</templatename>
+		<templatedescription>procurement materials</templatedescription>
+		<templatenameupdate>procurement update</templatenameupdate>
+		<templatedescriptionupdate>procurement materialsupdate</templatedescriptionupdate>
+		<entertender>T</entertender>
+        	<Stag1>10</Stag1>
+        	<Stag2>20</Stag2>
+        	<Stag3>30</Stag3>
+        	<Stag4>40</Stag4>
+        	<Stag5>50</Stag5>
+        	<durationupdate>10</durationupdate>
+        	<TradeList>Trade listing</TradeList>
+            <tenderplan>Tender plan</tenderplan>
+	</eTender>
+</data>

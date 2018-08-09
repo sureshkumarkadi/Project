@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+        <NotificationMessage>Select atleast one recipient to send notification</NotificationMessage>
+        <MessageTenderUpdate>Tender update</MessageTenderUpdate>
+		<MessageDuedate>Due date change</MessageDuedate>
+		<MessageTenderDeletion>Tender deletion</MessageTenderDeletion>
+		<MessageDueDateReminder>Due date reminder</MessageDueDateReminder>
+		<MessageNewRegist>New registration</MessageNewRegist>
+		<MessageAddUser>Add user to organisation</MessageAddUser>
+		<MessageRoleUpdate>User organisation role update</MessageRoleUpdate>
+		<MessageRemoveUser>Remove user from organisation</MessageRemoveUser>
+		<MessageTenderSubmit>Tender submit</MessageTenderSubmit>
+		<MessageTenderDecline>Tender decline</MessageTenderDecline>
+		<MessageTenderAcceptance>Tender acceptance</MessageTenderAcceptance>
+		<MessageLinkSelection>Tender update</MessageLinkSelection>
+		<user>User</user>
+		<organization>Organisation</organization>
+		<project>Project</project>
+		<tender>Tender</tender>
+		
+    </eTender>
+</data>
+

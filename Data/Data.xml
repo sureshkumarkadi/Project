@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+        <Subusername>Subcontractor@etender.com</Subusername>
+        <Subpassword>sub</Subpassword>
+
+        <SubusernamePtrades>suresh@etender.com</SubusernamePtrades>
+        <SubpasswordPtrade>suresh</SubpasswordPtrade>
+		<Estusername>AutomationTestTwo@etender.com</Estusername>
+        <Estpassword>AutomationTestTwo</Estpassword>
+
+		<Estusername1>AutomationTest@etender.com</Estusername1>
+        <Estpassword1>AutomationTest</Estpassword1>
+        <Estwrongpassword>Estimator321</Estwrongpassword>
+        <Estwrongusername>nagendra1@etender.com</Estwrongusername>
+        <Superadminusername>suresh.kumar@causeway.com</Superadminusername>
+        <Superadminpassword>suresh</Superadminpassword>
+        <tenderquickaccess>Tender quick access</tenderquickaccess>
+        <Tenderacceptance>Tender acceptance</Tenderacceptance>
+        <rate1>3.1</rate1>
+		<rate2>3.2</rate2>
+		<rate3>3.3</rate3>
+		<enternotes>Notes 1</enternotes>
+        <updateenternotes>Update </updateenternotes>
+		<userEmail>33@etender.com</userEmail>
+		<userSaveEmail>Automation-Supplier@etender.com</userSaveEmail>
+		<Changedpassword>suresh</Changedpassword>
+        <supplier-email>suresh@etender.com</supplier-email>
+        <supplier-password>suresh</supplier-password>
+		<Estimator>Estimator</Estimator>
+		<EstAdmin>Estimator Admin</EstAdmin>
+		<Supplier>Supplier</Supplier>
+		<SupAdmin>Supplier Admin</SupAdmin>
+		<roleMessage>Select a Role for User.</roleMessage>
+		<buildNo>1.3.4.4</buildNo>
+		<warninginRole>Select a user to manage role(s).</warninginRole>
+		<warninginUser>Select a user for organisation.</warninginUser>
+		<nametextprofile>NewOrganisationname</nametextprofile>
+		<nametempprofile>TempOrganisationname</nametempprofile>
+		<locationtext>London</locationtext>
+		<addresstext>London, UK</addresstext>
+        <supplier-confirmpassword>suresh</supplier-confirmpassword>
+		<Orgselection>GSE Civil Engineering Ltd</Orgselection>
+        <supplier-email1>test@etender.com</supplier-email1>
+        <supplier-password1>test</supplier-password1>
+        <supplier-confirmpassword1>test</supplier-confirmpassword1>
+        <supplier-firstname>suresh</supplier-firstname>
+        <supplier-lastname>kumar</supplier-lastname>
+        <supplier-mobile>9342733683</supplier-mobile>
+        <supplier-phone>08025226598</supplier-phone>
+        <supplier-company>CausewayTest</supplier-company>
+        <supplier-companyLOAD>Performance</supplier-companyLOAD>
+        <organisation-location>Murugeshpalya</organisation-location>
+        <organisation-phone>08025227845</organisation-phone>
+        <organisation-email>test@causewaytext.com</organisation-email>
+        <organisation-website>www.causewaytext.com</organisation-website>
+        <organisation-address>128/9,HAL Airport Road,MurugeshPalya</organisation-address>
+        <organisation-county>BANGALORE</organisation-county>
+        <organisation-country>INDIA</organisation-country>
+        <organisation-postalcode>560017</organisation-postalcode>
+        <itemdetails>Moredetails required</itemdetails>
+        <details>Details</details>
+    </eTender>
+</data>

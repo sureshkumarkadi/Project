@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+
+        <username>AutomationTestTwo@etender.com</username>
+        <password>AutomationTestTwo</password>
+        <tenderIDStage>21995</tenderIDStage>
+        <tenderIDPreStage>19780</tenderIDPreStage>
+        <tenderIDMaster>21995</tenderIDMaster>
+        <tendererReferenceIDStage>12204</tendererReferenceIDStage>
+        <tendererReferenceIDPreStage>12954</tendererReferenceIDPreStage>
+        <tendererReferenceIDMaster>12204</tendererReferenceIDMaster>
+        <projectname>ProjectfromRESTAPI</projectname>
+        <projectdescription>ProjectfromRESTAPI</projectdescription>
+        <projectRef>ProjectfromRESTAPI</projectRef>
+
+    </eTender>
+</data>

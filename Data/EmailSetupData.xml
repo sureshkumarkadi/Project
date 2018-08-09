@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<data>
+    <eTender>
+		<LogSelector>fileInput</LogSelector>
+		<CropImage>//img[@ng-show='!cropper.croppedImage']</CropImage>
+		<Invitation>//td[contains(text(),'Invitation')]</Invitation>
+		<ViewDetails>//a[contains(text(),'View Details')]</ViewDetails>
+		<ResetBtn>//button[contains(text(),'Reset')]</ResetBtn>
+		<SaveBtn>//button[contains(text(),'Save')]</SaveBtn>
+	</eTender>
+</data>
